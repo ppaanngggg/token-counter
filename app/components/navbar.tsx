@@ -1,24 +1,112 @@
 import Link from "next/link";
 
 export default function Navbar() {
+  const models = [
+    {
+      company: "OpenAI",
+      models: [
+        { name: "GPT-3.5", value: "gpt-3.5" },
+        { name: "GPT-3.5 Turbo", value: "gpt-3.5-turbo" },
+        { name: "GPT-4", value: "gpt-4" },
+        { name: "GPT-4 Turbo", value: "gpt-4-turbo" },
+        { name: "Embedding V3 large", value: "text-embedding-3-large" },
+        { name: "Embedding V3 small", value: "text-embedding-3-small" },
+        { name: "Embedding Ada 002", value: "text-embedding-ada-002" },
+      ],
+    },
+    {
+      company: "Anthropic",
+      models: [
+        { name: "Claude 3 Opus", value: "claude-3-opus" },
+        { name: "Claude 3 Sonnet", value: "claude-3-sonnet" },
+        { name: "Claude 3 Haiku", value: "claude-3-haiku" },
+        { name: "Claude 2.1", value: "claude-2.1" },
+        { name: "Claude 2.0", value: "claude-2.0" },
+        { name: "Claude Instant 1.2", value: "claude-instant-1.2" },
+      ],
+    },
+  ];
+
   return (
     <div className="navbar bg-base-300">
       <div className="navbar-start">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            {models.map((d) => {
+              return (
+                <li key={d.company}>
+                  <details>
+                    <summary className="font-semibold">{d.company}</summary>
+                    <ul className="p-2">
+                      {d.models.map((model) => {
+                        return (
+                          <li key={model.value}>
+                            <Link
+                              href={`/${d.company.toLowerCase()}/${model.value}`}
+                              className="px-2"
+                            >
+                              {model.name}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </details>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
         <Link href={"/"} className="text-xl font-bold px-2">
           Token Counter
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <a>Item 2</a>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
+          {models.map((d) => {
+            return (
+              <li key={d.company}>
+                <details>
+                  <summary className="text-base font-semibold">
+                    {d.company}
+                  </summary>
+                  <ul className="p-2 w-52">
+                    {d.models.map((model) => {
+                      return (
+                        <li key={model.value}>
+                          <Link
+                            href={`/${d.company.toLowerCase()}/${model.value}`}
+                            className="px-2"
+                          >
+                            {model.name}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </details>
+              </li>
+            );
+          })}
         </ul>
       </div>
       <div className="navbar-end">

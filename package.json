@@ -11,7 +11,9 @@
   "dependencies": {
     "next": "14.2.2",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tiktoken": "^1.0.14",
+    "tokenizers": "^0.13.3"
   },
   "devDependencies": {
     "@types/node": "^20",
