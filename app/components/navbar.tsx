@@ -25,6 +25,14 @@ export default function Navbar() {
         { name: "Claude Instant 1.2", value: "claude-instant-1.2" },
       ],
     },
+    {
+      company: "Llama",
+      models: [
+        { name: "Llama 3", value: "llama-3" },
+        { name: "Llama 2", value: "llama-2" },
+        { name: "Code Llama", value: "code-llama" },
+      ],
+    },
   ];
 
   return (
