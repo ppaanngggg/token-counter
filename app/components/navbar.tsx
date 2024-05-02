@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Navbar() {
   const models = [
     {
-      company: "OpenAI",
+      group: "OpenAI",
       models: [
         { name: "GPT-3.5", value: "gpt-3.5" },
         { name: "GPT-3.5 Turbo", value: "gpt-3.5-turbo" },
@@ -15,7 +15,7 @@ export default function Navbar() {
       ],
     },
     {
-      company: "Anthropic",
+      group: "Anthropic",
       models: [
         { name: "Claude 3 Opus", value: "claude-3-opus" },
         { name: "Claude 3 Sonnet", value: "claude-3-sonnet" },
@@ -26,7 +26,7 @@ export default function Navbar() {
       ],
     },
     {
-      company: "Llama",
+      group: "Llama",
       models: [
         { name: "Llama 3", value: "llama-3" },
         { name: "Llama 2", value: "llama-2" },
@@ -36,7 +36,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="navbar bg-base-300">
+    <header className="navbar bg-base-300">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -61,15 +61,15 @@ export default function Navbar() {
           >
             {models.map((d) => {
               return (
-                <li key={d.company}>
+                <li key={d.group}>
                   <details>
-                    <summary className="font-semibold">{d.company}</summary>
+                    <summary className="font-semibold">{d.group}</summary>
                     <ul className="p-2">
                       {d.models.map((model) => {
                         return (
                           <li key={model.value}>
                             <Link
-                              href={`/${d.company.toLowerCase()}/${model.value}`}
+                              href={`/${d.group.toLowerCase()}/${model.value}`}
                               className="px-2"
                             >
                               {model.name}
@@ -92,26 +92,27 @@ export default function Navbar() {
         <ul className="menu menu-horizontal px-1">
           {models.map((d) => {
             return (
-              <li key={d.company}>
-                <details>
-                  <summary className="text-base font-semibold">
-                    {d.company}
-                  </summary>
-                  <ul className="p-2 w-52">
-                    {d.models.map((model) => {
-                      return (
-                        <li key={model.value}>
-                          <Link
-                            href={`/${d.company.toLowerCase()}/${model.value}`}
-                            className="px-2"
-                          >
-                            {model.name}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </details>
+              <li key={d.group} className="dropdown">
+                <div tabIndex={0} role="button" className="btn btn-ghost">
+                  {d.group}
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                >
+                  {d.models.map((model) => {
+                    return (
+                      <li key={model.value}>
+                        <Link
+                          href={`/${d.group.toLowerCase()}/${model.value}`}
+                          className="px-2"
+                        >
+                          {model.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
               </li>
             );
           })}
@@ -137,6 +138,6 @@ export default function Navbar() {
           </svg>
         </Link>
       </div>
-    </div>
+    </header>
   );
 }
