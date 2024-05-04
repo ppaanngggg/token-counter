@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/navbar";
+import clsx from "clsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html data-theme="cupcake" lang="en">
-      <body className={inter.className}>
+      <body
+        className={clsx("min-h-screen subpixel-antialiased", inter.className)}
+      >
         <Navbar />
         {children}
       </body>
