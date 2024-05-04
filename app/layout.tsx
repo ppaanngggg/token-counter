@@ -1,25 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/app/components/navbar";
 import clsx from "clsx";
+import Navbar from "@/app/components/navbar";
+import { buildMetadata } from "@/app/utils/metadata";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export async function generateMetadata(): Promise<Metadata> {
-  let title = "All in one LLM Token Counter";
-  let description =
-    "Count tokens for all popular LLMs (GPT-4, Claude-3, Llama and more) in one place.";
-
-  return {
-    title: title,
-    description: description,
-    verification: { google: "1IppxSZ3nTfcrEZ--z1XPzzH5Km-0rmvAaKZ4eBs38U" },
-    metadataBase: new URL("https://token-counter.app"),
-    alternates: {
-      canonical: "/",
-    },
-  };
+export function generateMetadata(): Metadata {
+  return buildMetadata(
+    "All in one LLM Token Counter",
+    "Count tokens for all popular LLMs (GPT-4, Claude-3, Llama and more) in one place.",
+  );
 }
 
 export default function RootLayout({
@@ -30,7 +22,10 @@ export default function RootLayout({
   return (
     <html data-theme="cupcake" lang="en">
       <body
-        className={clsx("min-h-screen subpixel-antialiased", inter.className)}
+        className={clsx(
+          "min-h-screen flex flex-col subpixel-antialiased",
+          inter.className,
+        )}
       >
         <Navbar />
         {children}

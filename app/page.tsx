@@ -1,5 +1,5 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between"></main>
+    <main className="flex-1 flex flex-col items-center bg-base-200"></main>
   );
 }

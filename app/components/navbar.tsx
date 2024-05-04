@@ -1,42 +1,9 @@
 import Link from "next/link";
-
-const models = [
-  {
-    group: "OpenAI",
-    models: [
-      { name: "GPT-3.5", value: "gpt-3.5" },
-      { name: "GPT-3.5 Turbo", value: "gpt-3.5-turbo" },
-      { name: "GPT-4", value: "gpt-4" },
-      { name: "GPT-4 Turbo", value: "gpt-4-turbo" },
-      { name: "Embedding V3 large", value: "text-embedding-3-large" },
-      { name: "Embedding V3 small", value: "text-embedding-3-small" },
-      { name: "Embedding Ada 002", value: "text-embedding-ada-002" },
-    ],
-  },
-  {
-    group: "Anthropic",
-    models: [
-      { name: "Claude 3 Opus", value: "claude-3-opus" },
-      { name: "Claude 3 Sonnet", value: "claude-3-sonnet" },
-      { name: "Claude 3 Haiku", value: "claude-3-haiku" },
-      { name: "Claude 2.1", value: "claude-2.1" },
-      { name: "Claude 2.0", value: "claude-2.0" },
-      { name: "Claude Instant 1.2", value: "claude-instant-1.2" },
-    ],
-  },
-  {
-    group: "Llama",
-    models: [
-      { name: "Llama 3", value: "llama-3" },
-      { name: "Llama 2", value: "llama-2" },
-      { name: "Code Llama", value: "code-llama" },
-    ],
-  },
-];
+import { models } from "@/app/utils/models";
 
 export default function Navbar() {
   return (
-    <header className="navbar bg-base-300">
+    <header className="navbar h-16 bg-primary">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
