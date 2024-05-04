@@ -1,5 +1,9 @@
 export default function Home() {
   return (
-    <main className="flex-1 flex flex-col items-center bg-base-200"></main>
+    <main className="flex-1 flex flex-col items-center bg-base-200">
+      <h1 className="text-2xl font-semibold m-8">
+        All in one LLM Token Counter
+      </h1>
+    </main>
   );
 }
