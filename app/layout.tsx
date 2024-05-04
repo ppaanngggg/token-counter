@@ -5,6 +5,7 @@ import clsx from "clsx";
 import Navbar from "@/app/components/navbar";
 import { buildMetadata } from "@/app/utils/metadata";
 import Footer from "@/app/components/footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
