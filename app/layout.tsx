@@ -6,11 +6,21 @@ import clsx from "clsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "All in one LLM Token Counter",
-  description:
-    "Count tokens for all popular LLMs (GPT-4, Claude-3, Command-R and more) in one place.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  let title = "All in one LLM Token Counter";
+  let description =
+    "Count tokens for all popular LLMs (GPT-4, Claude-3, Llama and more) in one place.";
+
+  return {
+    title: title,
+    description: description,
+    verification: { google: "1IppxSZ3nTfcrEZ--z1XPzzH5Km-0rmvAaKZ4eBs38U" },
+    metadataBase: new URL("https://token-counter.app"),
+    alternates: {
+      canonical: "/",
+    },
+  };
+}
 
 export default function RootLayout({
   children,
