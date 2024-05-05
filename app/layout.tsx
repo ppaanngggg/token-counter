@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 export function generateMetadata(): Metadata {
   return buildMetadata(
     "All in one LLM Token Counter",
-    "Count tokens for all popular LLMs (GPT-4, Claude-3, Llama and more) in one place.",
+    "All in one LLM Token Counter - Count tokens for all popular LLMs (GPT-3.5, GPT-4, Claude-3, Llama-3 and more).",
   );
 }
 
