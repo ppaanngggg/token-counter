@@ -6,6 +6,7 @@ import Navbar from "@/app/components/navbar";
 import { buildMetadata } from "@/app/utils/metadata";
 import Footer from "@/app/components/footer";
 import { Analytics } from "@vercel/analytics/react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <GoogleAnalytics gaId="G-XTJZTH352K" />
         <Analytics />
       </body>
     </html>
