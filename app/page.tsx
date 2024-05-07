@@ -9,6 +9,7 @@ export default function Home() {
       </h1>
       <Cards />
       <FAQ />
+      <div className="h-12"></div>
     </main>
   );
 }

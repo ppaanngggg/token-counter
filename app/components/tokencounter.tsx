@@ -28,7 +28,7 @@ export default function TokenCounter(props: {
   }, [text]);
 
   return (
-    <div className="flex-1 w-full lg:max-h-[50vh] lg:max-w-[80vh] flex flex-col items-center px-4">
+    <div className="flex-1 w-full md:max-h-[50vh] md:max-w-[80vh] flex flex-col items-center px-4 mx-auto">
       <p className="text-sm bg-accent text-accent-content rounded-lg m-2 py-0.5 px-2">
         * No need to worry about your data, counter is running on your browser.
       </p>

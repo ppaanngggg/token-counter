@@ -4,7 +4,7 @@ export default function FAQ() {
   const qClass = "text-l font-semibold my-1";
   const aClass = "text-s text-justify my-1";
   return (
-    <div className="card w-full lg:w-1/2 bg-accent text-accent-content shadow-xl flex flex-col items-left m-8 p-4">
+    <div className="card w-full md:w-1/2 bg-accent text-accent-content shadow-xl flex flex-col items-left p-4 mx-auto">
       <h2 className="text-xl font-semibold mt-2">FAQ:</h2>
       <div className="divider"></div>
       <h3 className={qClass}>• What is LLM Token Counter?</h3>
