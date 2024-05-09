@@ -10,10 +10,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export function generateMetadata(): Metadata {
-  return buildMetadata(
-    "All in one LLM Token Counter",
-    "All in one LLM Token Counter - Count tokens for all popular LLMs (GPT-3.5, GPT-4, Claude-3, Llama-3 and more).",
-  );
+  return buildMetadata(undefined, undefined);
 }
 
 export default function RootLayout({

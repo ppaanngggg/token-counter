@@ -1,6 +1,6 @@
 import TokenCounter from "@/app/components/tokencounter";
 import { Suspense } from "react";
-import { getModel } from "@/app/utils/models";
+import { getGroup, getModel } from "@/app/utils/groups";
 import { redirect } from "next/navigation";
 import { Metadata } from "next";
 import { buildMetadata } from "@/app/utils/metadata";
@@ -10,8 +10,7 @@ export function generateMetadata({
 }: {
   params: { group: string; model: string };
 }): Metadata {
-  const title = "Token Counter for " + params.group + " " + params.model;
-  return buildMetadata(title, title);
+  return buildMetadata(params.group, params.model);
 }
 
 export default function Page({
@@ -19,7 +18,11 @@ export default function Page({
 }: {
   params: { group: string; model: string };
 }) {
-  const model = getModel(params.group, params.model);
+  const group = getGroup(params.group);
+  if (!group) {
+    redirect("/");
+  }
+  const model = getModel(group, params.model);
   if (!model) {
     redirect("/");
   }
@@ -27,7 +30,7 @@ export default function Page({
   return (
     <main className="flex-1 flex flex-col items-center bg-base-200">
       <h1 className="text-lg font-semibold bg-secondary text-secondary-content rounded-2xl mt-2 py-2 px-4">
-        Count Token for {model.name}
+        Count Token for {group.name} {model.name}
       </h1>
       <Suspense>
         <TokenCounter model={model} />

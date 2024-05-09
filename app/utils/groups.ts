@@ -1,6 +1,17 @@
-const models = [
+interface Model {
+  name: string;
+  value: string;
+  hub: string;
+}
+
+interface Group {
+  name: string;
+  models: Model[];
+}
+
+const groups: Group[] = [
   {
-    group: "OpenAI",
+    name: "OpenAI",
     models: [
       { name: "GPT-3.5", value: "gpt-3.5", hub: "Xenova/gpt-3.5-turbo" },
       {
@@ -28,7 +39,7 @@ const models = [
     ],
   },
   {
-    group: "Anthropic",
+    name: "Anthropic",
     models: [
       {
         name: "Claude 3 Opus",
@@ -63,7 +74,7 @@ const models = [
     ],
   },
   {
-    group: "Llama",
+    name: "Meta",
     models: [
       { name: "Llama 3", value: "llama-3", hub: "Xenova/llama-3-tokenizer" },
       { name: "Llama 2", value: "llama-2", hub: "Xenova/llama2-tokenizer" },
@@ -76,10 +87,12 @@ const models = [
   },
 ];
 
-function getModel(group: string, model: string) {
-  return models
-    .find((m) => m.group.toLowerCase() === group)
-    ?.models.find((m) => m.value === model);
+function getGroup(group: string): Group | undefined {
+  return groups.find((m) => m.name.toLowerCase() === group);
 }
 
-export { models, getModel };
+function getModel(group: Group, model: string): Model | undefined {
+  return group.models.find((m) => m.value === model);
+}
+
+export { groups, getGroup, getModel };
