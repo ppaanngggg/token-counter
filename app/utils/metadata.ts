@@ -9,8 +9,5 @@ export function buildMetadata(title: string, description: string): Metadata {
       yandex: "e471e35b09a83570",
     },
     metadataBase: new URL("https://token-counter.app"),
-    alternates: {
-      canonical: "/",
-    },
   };
 }
