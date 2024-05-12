@@ -13,7 +13,6 @@ const groups: Group[] = [
   {
     name: "OpenAI",
     models: [
-      { name: "GPT-3.5", value: "gpt-3.5", hub: "Xenova/gpt-3.5-turbo" },
       {
         name: "GPT-3.5 Turbo",
         value: "gpt-3.5-turbo",

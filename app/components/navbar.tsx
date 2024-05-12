@@ -52,6 +52,13 @@ export default function Navbar() {
             })}
           </ul>
         </div>
+        <Image
+          src="/favicon.ico"
+          alt="token counter"
+          width={42}
+          height={42}
+          className="rounded-full"
+        />
         <Link href={"/"} className="text-xl font-bold px-2">
           Token Counter
         </Link>
@@ -91,8 +98,8 @@ export default function Navbar() {
           <Image
             src="/static/email.svg"
             alt="emailme"
-            width="36"
-            height="36"
+            width={36}
+            height={36}
             className="pr-2"
           />
         </Link>
@@ -101,7 +108,7 @@ export default function Navbar() {
           rel="noopener ugc nofollow"
           target="_blank"
         >
-          <Image src="/static/github.svg" alt="github" width="24" height="24" />
+          <Image src="/static/github.svg" alt="github" width={24} height={24} />
         </Link>
         <Link
           href="https://buymeacoffee.com/ppaanngggg"
@@ -111,8 +118,8 @@ export default function Navbar() {
           <Image
             src="/static/bmc.svg"
             alt="buymeacoffee"
-            width="40"
-            height="40"
+            width={40}
+            height={40}
           />
         </Link>
         <Link
@@ -120,7 +127,7 @@ export default function Navbar() {
           rel="noopener ugc nofollow"
           target="_blank"
         >
-          <Image src="/static/ko-fi.svg" alt="ko-fi" width="30" height="30" />
+          <Image src="/static/ko-fi.svg" alt="ko-fi" width={30} height={30} />
         </Link>
       </div>
     </header>

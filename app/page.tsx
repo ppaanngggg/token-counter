@@ -8,7 +8,7 @@ export default function Home() {
         All in one LLM Token Counter
       </h1>
       <Cards />
-      <FAQ />
+      <FAQ group={undefined} model={undefined} />
       <div className="h-12"></div>
     </main>
   );
