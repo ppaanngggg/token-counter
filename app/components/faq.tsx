@@ -100,6 +100,53 @@ export default function FAQ(props: {
           </p>
         </>
       )}
+      {props.model === "gpt-4-turbo" && (
+        <>
+          <h3 className={qClass}>• GPT-4 vs GPT-4 Turbo</h3>
+          <p className={aClass}>
+            1. GPT-4 Turbo offers significantly faster processing speeds and
+            enhanced performance compared to GPT-4, making it better suited for
+            applications requiring real-time interaction and high-throughput
+            processing.
+            <br />
+            2. GPT-4 Turbo achieves higher levels of accuracy and precision in
+            text generation and comprehension, thanks to its optimized
+            algorithms and advanced learning techniques.
+            <br />
+            3. GPT-4 Turbo exhibits greater versatility and adaptability, with
+            an expanded vocabulary and adaptive learning capabilities that
+            enable it to handle a broader range of tasks and contexts.
+            <br />
+            4. While GPT-4 is well-suited for a wide range of applications,
+            GPT-4 Turbo excels in scenarios where speed, accuracy, and real-time
+            interaction are paramount, such as customer service chatbots,
+            virtual assistants, and automated content generation platforms.
+          </p>
+        </>
+      )}
+      {props.model === "gpt-4o" && (
+        <>
+          <h3 className={qClass}>• GPT-4o Introduction</h3>
+          <p className={aClass}>
+            GPT-4o (&quot;o&quot; for &quot;omni&quot;) represents the pinnacle
+            of OpenAI&apos;s language model capabilities. As a multimodal AI
+            system, it seamlessly accepts text or image inputs and generates
+            highly coherent and contextually relevant text outputs. Boasting an
+            intelligence on par with GPT-4 Turbo, GPT-4o distinguishes itself
+            through unparalleled efficiency, generating text at twice the speed
+            while incurring only half the computational cost. Moreover, GPT-4o
+            excels in vision tasks and exhibits exceptional performance across
+            non-English languages, surpassing its counterparts in these domains.
+            This cutting-edge model is available through the OpenAI API,
+            empowering paying customers to harness its remarkable capabilities
+            in their applications.
+            <br />
+            Notably, GPT-4o boasts an impressive maximum context window of
+            128,000 tokens, facilitating the seamless processing of extensive
+            input data.
+          </p>
+        </>
+      )}
       <h3 className={qClass}>• Will I leak my prompt?</h3>
       <p className={aClass}>
         No, you will not leak your prompt. The token count calculation is

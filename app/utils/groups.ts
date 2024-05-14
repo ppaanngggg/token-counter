@@ -13,13 +13,14 @@ const groups: Group[] = [
   {
     name: "OpenAI",
     models: [
+      { name: "GPT-4o", value: "gpt-4o", hub: "Xenova/gpt-4o" },
+      { name: "GPT-4 Turbo", value: "gpt-4-turbo", hub: "Xenova/gpt-4" },
+      { name: "GPT-4", value: "gpt-4", hub: "Xenova/gpt-4" },
       {
         name: "GPT-3.5 Turbo",
         value: "gpt-3.5-turbo",
         hub: "Xenova/gpt-3.5-turbo",
       },
-      { name: "GPT-4", value: "gpt-4", hub: "Xenova/gpt-4" },
-      { name: "GPT-4 Turbo", value: "gpt-4-turbo", hub: "Xenova/gpt-4" },
       {
         name: "Embedding V3 large",
         value: "text-embedding-3-large",
