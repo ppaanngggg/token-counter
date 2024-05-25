@@ -1,3 +1,3 @@
-# token-counter-web
+# token-counter
 
-Frontend for the [token-counter](https://github.com/ppaanngggg/token-counter) project.
+![og.jpg](/public/static/og.jpg)
