@@ -14,16 +14,28 @@ export function buildMetadata(
     "Easily track and manage token usage with our user-friendly tool.";
   let canonical = "/";
 
+  if (group && model === undefined) {
+    canonical = `/${group}`;
+    const groupData = getGroup(group);
+    if (groupData) {
+      title = `${groupData.name} | Token Counter`;
+      description =
+        "Our pure browser-based LLM token counter allows you to accurately calculate tokens of prompt " +
+        `for ${groupData.name}. ` +
+        "Easily track and manage token usage with our user-friendly tool.";
+    }
+  }
+
   if (group && model) {
     canonical = `/${group}/${model}`;
     const groupData = getGroup(group);
     if (groupData) {
       const modelData = getModel(groupData, model);
       if (modelData) {
-        title = `${groupData.name} ${modelData.name} | Token Counter`;
+        title = `${modelData.name} | Token Counter`;
         description =
           "Our pure browser-based LLM token counter allows you to accurately calculate tokens of prompt " +
-          `for ${groupData.name} ${modelData.name}. ` +
+          `for ${modelData.name}. ` +
           "Easily track and manage token usage with our user-friendly tool.";
       }
     }

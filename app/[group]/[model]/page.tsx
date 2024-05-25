@@ -30,12 +30,10 @@ export default function Page({
 
   return (
     <main className="flex-1 flex flex-col items-center bg-base-200">
-      <div className="card shadow-xl bg-secondary text-secondary-content my-6 mx-4">
-        <div className="card-body py-4">
-          <h2 className="card-title">
-            {group.name} {model.name}
-          </h2>
-          <p>Count the tokens of the prompt you enter below.</p>
+      <div className="card shadow-xl bg-secondary text-secondary-content m-4">
+        <div className="card-body items-center text-center">
+          <h1 className="card-title">{model.name} Token Counter</h1>
+          <h2>Count the tokens of the prompt you enter below.</h2>
         </div>
       </div>
       <Suspense>

@@ -12,6 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
   for (const group of groups) {
+    arr.push({
+      url: `https://token-counter.app/${group.name.toLowerCase()}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    });
     for (const model of group.models) {
       arr.push({
         url: `https://token-counter.app/${group.name.toLowerCase()}/${model.value}`,

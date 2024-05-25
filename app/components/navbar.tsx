@@ -38,7 +38,6 @@ export default function Navbar() {
                           <li key={model.value}>
                             <Link
                               href={`/${group.name.toLowerCase()}/${model.value}`}
-                              className="px-2"
                             >
                               {model.name}
                             </Link>
@@ -59,28 +58,29 @@ export default function Navbar() {
           height={42}
           className="rounded-full"
         />
-        <Link href={"/"} className="text-xl font-bold px-2">
+        <Link href={"/"} className="btn btn-ghost text-xl font-bold px-2">
           Token Counter
         </Link>
       </div>
       <div className="navbar-center hidden md:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul>
           {groups.map((group) => {
             return (
-              <li key={group.name} className="dropdown">
-                <div tabIndex={0} role="button" className="btn btn-ghost">
-                  {group.name}
+              <li key={group.name} className="dropdown dropdown-hover">
+                <div tabIndex={0} role="button" className="btn btn-ghost m-1">
+                  <Link href={`/${group.name.toLowerCase()}`}>
+                    {group.name}
+                  </Link>
                 </div>
                 <ul
                   tabIndex={0}
-                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                  className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
                 >
                   {group.models.map((model) => {
                     return (
                       <li key={model.value}>
                         <Link
                           href={`/${group.name.toLowerCase()}/${model.value}`}
-                          className="px-2"
                         >
                           {model.name}
                         </Link>

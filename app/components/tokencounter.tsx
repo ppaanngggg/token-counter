@@ -5,7 +5,7 @@ import { AutoTokenizer, PreTrainedTokenizer } from "@xenova/transformers";
 import { useDebouncedCallback } from "use-debounce";
 
 export default function TokenCounter(props: {
-  model: { name: string; value: string; hub: string };
+  model: { name: string; value: string; context: number; hub: string };
 }) {
   const [text, setText] = useState<string>("");
   const [tokens, setTokens] = useState<number>(0);
@@ -33,7 +33,7 @@ export default function TokenCounter(props: {
   );
 
   return (
-    <div className="max-w-full w-[64rem] h-[50vh] flex flex-col items-left content-center px-4 mx-auto">
+    <div className="max-w-full w-[64rem] h-[50vh] flex flex-col items-left content-center p-2">
       <p className="text-sm m-1">
         * Don&apos;t worry about your data, calculation is happening on your
         browser.
