@@ -20,9 +20,21 @@ export default function FAQ(props: {
   const qClass = "text-l font-semibold my-1";
   const aClass = "text-s text-justify my-1";
   return (
-    <div className="rounded-2xl max-w-[64rem] bg-accent text-accent-content shadow-xl flex flex-col items-left p-4 m-4">
+    <div className="rounded-2xl max-w-[64rem] bg-accent text-accent-content shadow-xl flex flex-col items-left p-4 m-2">
       <h2 className="text-xl font-semibold mt-2">FAQ:</h2>
       <div className="divider"></div>
+      {props.group === "openai" && (
+        <>
+          <h3 className={qClass}>• What is OpenAI</h3>
+          <p className={aClass}>
+            OpenAI is a research and deployment company that aims to promote and
+            develop friendly artificial general intelligence (AGI) in a way that
+            benefits humanity as a whole. OpenAI&apos;s goals are to advance
+            digital intelligence in the way that is most likely to benefit
+            humanity as a whole.
+          </p>
+        </>
+      )}
       {props.model === undefined && (
         <>
           <h3 className={qClass}>• What is LLM Token Counter?</h3>
@@ -59,18 +71,7 @@ export default function FAQ(props: {
           </p>
         </>
       )}
-      {props.group === "openai" && (
-        <>
-          <h3 className={qClass}>• What is OpenAI</h3>
-          <p className={aClass}>
-            OpenAI is a research and deployment company that aims to promote and
-            develop friendly artificial general intelligence (AGI) in a way that
-            benefits humanity as a whole. OpenAI&apos;s goals are to advance
-            digital intelligence in the way that is most likely to benefit
-            humanity as a whole.
-          </p>
-        </>
-      )}
+
       {props.model === "gpt-3.5-turbo" && (
         <>
           <h3 className={qClass}>• GPT-3.5 Turbo Introduction</h3>

@@ -38,7 +38,6 @@ export default function Navbar() {
                           <li key={model.value}>
                             <Link
                               href={`/${group.name.toLowerCase()}/${model.value}`}
-                              className="px-2"
                             >
                               {model.name}
                             </Link>

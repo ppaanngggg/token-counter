@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Cards() {
   return (
-    <div className="carousel carousel-center w-fit max-w-full p-4 space-x-4 rounded-box mx-auto my-8">
+    <div className="carousel carousel-center w-fit max-w-full space-x-4 rounded-box mx-auto p-2 my-4">
       {groups.map((d) => {
         return (
           <div className="carousel-item bg-base-100 rounded-box" key={d.name}>

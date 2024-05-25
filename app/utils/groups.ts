@@ -128,3 +128,4 @@ function getModel(group: Group, model: string): Model | undefined {
 }
 
 export { groups, getGroup, getModel };
+export type { Group, Model };
