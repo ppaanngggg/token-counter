@@ -25,13 +25,39 @@ export default function FAQ(props: {
       <div className="divider"></div>
       {props.group === "openai" && (
         <>
-          <h3 className={qClass}>• What is OpenAI</h3>
+          <h3 className={qClass}>• What is OpenAI?</h3>
           <p className={aClass}>
             OpenAI is a research and deployment company that aims to promote and
             develop friendly artificial general intelligence (AGI) in a way that
             benefits humanity as a whole. OpenAI&apos;s goals are to advance
             digital intelligence in the way that is most likely to benefit
             humanity as a whole.
+          </p>
+        </>
+      )}
+      {props.group === "anthropic" && (
+        <>
+          <h3 className={qClass}>• What is Anthropic?</h3>
+          <p className={aClass}>
+            Anthropic is an AI safety and research company founded in 2021 by
+            former OpenAI employees, focused on developing AI systems that are
+            interpretable, steerable, and safe. The company aims to align AI
+            technologies with human values and ensure their beneficial impact on
+            society. Anthropic&apos;s work involves cutting-edge research in AI
+            alignment and large-scale model training.
+          </p>
+        </>
+      )}
+      {props.group === "meta" && (
+        <>
+          <h3 className={qClass}>• What is Meta Llama?</h3>
+          <p className={aClass}>
+            Meta LLaMA (Large Language Model Meta AI) is a state-of-the-art
+            language model developed by Meta, designed to understand and
+            generate human-like text. It is part of Meta&apos;s broader efforts
+            to advance AI capabilities and integrate them into various
+            applications. LLaMA aims to enhance user interactions by providing
+            more accurate and contextually relevant responses.
           </p>
         </>
       )}
@@ -71,7 +97,6 @@ export default function FAQ(props: {
           </p>
         </>
       )}
-
       {props.model === "gpt-3.5-turbo" && (
         <>
           <h3 className={qClass}>• GPT-3.5 Turbo Introduction</h3>
