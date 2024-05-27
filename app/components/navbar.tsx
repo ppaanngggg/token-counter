@@ -53,7 +53,7 @@ export default function Navbar() {
         </div>
         <Image
           src="/favicon.ico"
-          alt="token counter"
+          alt="token counter icon"
           width={42}
           height={42}
           className="rounded-full"
