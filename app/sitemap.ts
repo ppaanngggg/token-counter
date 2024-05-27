@@ -3,9 +3,10 @@ import { MetadataRoute } from "next";
 import { groups } from "@/app/utils/groups";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl: string = "https://token-counter.app";
   const arr: MetadataRoute.Sitemap = [
     {
-      url: "https://token-counter.app",
+      url: `${baseUrl}/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
@@ -13,14 +14,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   for (const group of groups) {
     arr.push({
-      url: `https://token-counter.app/${group.name.toLowerCase()}`,
+      url: `${baseUrl}/${group.name.toLowerCase()}`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
     });
     for (const model of group.models) {
       arr.push({
-        url: `https://token-counter.app/${group.name.toLowerCase()}/${model.value}`,
+        url: `${baseUrl}/${group.name.toLowerCase()}/${model.value}`,
         lastModified: new Date(),
         changeFrequency: "monthly",
         priority: 1,

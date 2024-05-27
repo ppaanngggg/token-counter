@@ -6,7 +6,7 @@ export function buildMetadata(
   group: string | undefined,
   model: string | undefined,
 ): Metadata {
-  const url: string = "https://token-counter.app";
+  const baseUrl: string = "https://token-counter.app";
   let title = "All in one LLM Token Counter";
   let description =
     "Our pure browser-based LLM token counter allows you to accurately calculate tokens of prompt " +
@@ -41,7 +41,7 @@ export function buildMetadata(
     }
   }
   return {
-    metadataBase: new URL(url),
+    metadataBase: new URL(baseUrl),
     title: title,
     description: description,
     verification: {
@@ -49,16 +49,16 @@ export function buildMetadata(
       yandex: "e471e35b09a83570",
     },
     alternates: {
-      canonical: canonical,
+      canonical: baseUrl + canonical,
     },
     openGraph: {
       title: title,
       description: description,
-      url: url + canonical,
+      url: baseUrl + canonical,
       siteName: "Token Counter",
       images: [
         {
-          url: url + "/static/og.jpg",
+          url: baseUrl + "/static/og.jpg",
           width: 1200,
           height: 630,
           alt: title,
@@ -75,7 +75,7 @@ export function buildMetadata(
       creatorId: "1767790642477060096",
       images: [
         {
-          url: url + "/static/og.jpg",
+          url: baseUrl + "/static/og.jpg",
           alt: title,
         },
       ],
