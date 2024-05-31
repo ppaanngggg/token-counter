@@ -12,10 +12,8 @@ export function buildMetadata(
     "Our pure browser-based LLM token counter allows you to accurately calculate tokens of prompt " +
     "for all popular LLMs including GPT-3.5, GPT-4, Claude-3, Llama-3 and many more. " +
     "Easily track and manage token usage with our user-friendly tool.";
-  let canonical = "/";
 
   if (group && model === undefined) {
-    canonical = `/${group}`;
     const groupData = getGroup(group);
     if (groupData) {
       title = `${groupData.name} | Token Counter`;
@@ -27,7 +25,6 @@ export function buildMetadata(
   }
 
   if (group && model) {
-    canonical = `/${group}/${model}`;
     const groupData = getGroup(group);
     if (groupData) {
       const modelData = getModel(groupData, model);
@@ -41,24 +38,27 @@ export function buildMetadata(
     }
   }
   return {
-    metadataBase: new URL(baseUrl),
     title: title,
     description: description,
+    referrer: "origin-when-cross-origin",
+    authors: [{ name: "Hantian Pang", url: "https://github.com/ppaanngggg" }],
+    creator: "Hantian Pang",
+    publisher: "Hantian Pang",
+    robots: "follow, index",
+    icons: { icon: "/favicon.ico" },
     verification: {
       google: "1IppxSZ3nTfcrEZ--z1XPzzH5Km-0rmvAaKZ4eBs38U",
       yandex: "e471e35b09a83570",
     },
-    alternates: {
-      canonical: baseUrl + canonical,
-    },
+    metadataBase: new URL(baseUrl),
     openGraph: {
+      url: baseUrl,
       title: title,
       description: description,
-      url: baseUrl + canonical,
       siteName: "Token Counter",
       images: [
         {
-          url: baseUrl + "/static/og.jpg",
+          url: "/static/og.jpg",
           width: 1200,
           height: 630,
           alt: title,
@@ -75,7 +75,7 @@ export function buildMetadata(
       creatorId: "1767790642477060096",
       images: [
         {
-          url: baseUrl + "/static/og.jpg",
+          url: "/static/og.jpg",
           alt: title,
         },
       ],
