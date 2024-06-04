@@ -10,8 +10,10 @@ export function buildMetadata(
   let title = "All in one LLM Token Counter";
   let description =
     "Calculate tokens of prompt for all popular LLMs including GPT-4, Claude-3, Llama-3 and many more using pure browser-based Tokenizer.";
+  let canonical = "/";
 
   if (group && model === undefined) {
+    canonical = `/${group}`;
     const groupData = getGroup(group);
     if (groupData) {
       title = `${groupData.name} | Token Counter`;
@@ -20,6 +22,7 @@ export function buildMetadata(
   }
 
   if (group && model) {
+    canonical = `/${group}/${model}`;
     const groupData = getGroup(group);
     if (groupData) {
       const modelData = getModel(groupData, model);
@@ -41,6 +44,9 @@ export function buildMetadata(
     verification: {
       google: "1IppxSZ3nTfcrEZ--z1XPzzH5Km-0rmvAaKZ4eBs38U",
       yandex: "e471e35b09a83570",
+    },
+    alternates: {
+      canonical: baseUrl + canonical,
     },
     metadataBase: new URL(baseUrl),
     openGraph: {
