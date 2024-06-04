@@ -173,6 +173,54 @@ export default function FAQ(props: {
           </p>
         </>
       )}
+      {props.model === "claude-3-opus" && (
+        <>
+          <h3 className={qClass}>• Claude 3 Opus Introduction</h3>
+          <p className={aClass}>
+            The Claude 3 family of models represents the cutting edge of AI
+            technology, offering unparalleled performance, versatility, and ease
+            of use. These models excel at open-ended conversation, collaboration
+            on ideas, coding tasks, and working with text – whether searching,
+            writing, editing, translating, outlining, or summarizing.{" "}
+            <b>Claude 3 Opus</b> is the most powerful model, delivering
+            state-of-the-art performance on highly complex tasks and
+            demonstrating fluency and human-like understanding. The context
+            window of Claude 3 Opus is 200K.
+          </p>
+        </>
+      )}
+      {props.model === "claude-3-sonnet" && (
+        <>
+          <h3 className={qClass}>• Claude 3 Opus Introduction</h3>
+          <p className={aClass}>
+            The Claude 3 family of models represents the cutting edge of AI
+            technology, offering unparalleled performance, versatility, and ease
+            of use. These models excel at open-ended conversation, collaboration
+            on ideas, coding tasks, and working with text – whether searching,
+            writing, editing, translating, outlining, or summarizing.{" "}
+            <b>Claude 3 Sonnet</b> is the most balanced model between
+            intelligence and speed, a great choice for enterprise workloads and
+            scaled AI deployments. The context window of Claude 3 Sonnet is
+            200K.
+          </p>
+        </>
+      )}
+      {props.model === "claude-3-haiku" && (
+        <>
+          <h3 className={qClass}>• Claude 3 Opus Introduction</h3>
+          <p className={aClass}>
+            The Claude 3 family of models represents the cutting edge of AI
+            technology, offering unparalleled performance, versatility, and ease
+            of use. These models excel at open-ended conversation, collaboration
+            on ideas, coding tasks, and working with text – whether searching,
+            writing, editing, translating, outlining, or summarizing.{" "}
+            <b>Claude 3 Haiku</b> is the most fastest and most compact model,
+            designed for near-instant responsiveness and seamless AI experiences
+            that mimic human interactions. The context window of Claude 3 Haiku
+            is 200K.
+          </p>
+        </>
+      )}
       <h3 className={qClass}>• Will I leak my prompt?</h3>
       <p className={aClass}>
         No, you will not leak your prompt. The token count calculation is
