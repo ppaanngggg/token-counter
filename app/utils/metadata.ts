@@ -9,18 +9,13 @@ export function buildMetadata(
   const baseUrl: string = "https://token-counter.app";
   let title = "All in one LLM Token Counter";
   let description =
-    "Our pure browser-based LLM token counter allows you to accurately calculate tokens of prompt " +
-    "for all popular LLMs including GPT-3.5, GPT-4, Claude-3, Llama-3 and many more. " +
-    "Easily track and manage token usage with our user-friendly tool.";
+    "Calculate tokens of prompt for all popular LLMs including GPT-4, Claude-3, Llama-3 and many more using pure browser-based Tokenizer.";
 
   if (group && model === undefined) {
     const groupData = getGroup(group);
     if (groupData) {
       title = `${groupData.name} | Token Counter`;
-      description =
-        "Our pure browser-based LLM token counter allows you to accurately calculate tokens of prompt " +
-        `for ${groupData.name}. ` +
-        "Easily track and manage token usage with our user-friendly tool.";
+      description = `Calculate tokens of prompt for all popular LLMs for ${groupData.name} models using pure browser-based Tokenizer.`;
     }
   }
 
@@ -30,10 +25,7 @@ export function buildMetadata(
       const modelData = getModel(groupData, model);
       if (modelData) {
         title = `${modelData.name} | Token Counter`;
-        description =
-          "Our pure browser-based LLM token counter allows you to accurately calculate tokens of prompt " +
-          `for ${modelData.name}. ` +
-          "Easily track and manage token usage with our user-friendly tool.";
+        description = `Calculate tokens of prompt for all popular LLMs for ${modelData.name} using pure browser-based Tokenizer.`;
       }
     }
   }
