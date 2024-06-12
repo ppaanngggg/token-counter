@@ -29,7 +29,7 @@ export default function Page({
   }
 
   return (
-    <main className="flex-1 flex flex-col items-center bg-base-200">
+    <>
       <div className="card card-compact md:card-normal shadow-xl bg-secondary text-secondary-content m-4">
         <div className="card-body items-center text-center">
           <h1 className="card-title">{model.name} Token Counter</h1>
@@ -41,6 +41,6 @@ export default function Page({
       </Suspense>
       <FAQ group={params.group} model={params.model} />
       <div className="h-12"></div>
-    </main>
+    </>
   );
 }

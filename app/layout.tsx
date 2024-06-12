@@ -27,7 +27,9 @@ export default function RootLayout({
         )}
       >
         <Navbar />
-        {children}
+        <main className="flex-1 flex flex-col items-center bg-base-200">
+          {children}
+        </main>
         <Footer />
         <GoogleAnalytics gaId="G-XTJZTH352K" />
       </body>

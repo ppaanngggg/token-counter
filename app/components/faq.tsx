@@ -191,7 +191,7 @@ export default function FAQ(props: {
       )}
       {props.model === "claude-3-sonnet" && (
         <>
-          <h3 className={qClass}>• Claude 3 Opus Introduction</h3>
+          <h3 className={qClass}>• Claude 3 Sonnet Introduction</h3>
           <p className={aClass}>
             The Claude 3 family of models represents the cutting edge of AI
             technology, offering unparalleled performance, versatility, and ease
@@ -207,7 +207,7 @@ export default function FAQ(props: {
       )}
       {props.model === "claude-3-haiku" && (
         <>
-          <h3 className={qClass}>• Claude 3 Opus Introduction</h3>
+          <h3 className={qClass}>• Claude 3 Haiku Introduction</h3>
           <p className={aClass}>
             The Claude 3 family of models represents the cutting edge of AI
             technology, offering unparalleled performance, versatility, and ease
