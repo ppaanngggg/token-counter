@@ -173,6 +173,32 @@ export default function FAQ(props: {
           </p>
         </>
       )}
+      {props.model === "claude-3.5-sonnet" && (
+        <>
+          <h3 className={qClass}>• Claude 3.5 Sonnet Introduction</h3>
+          <p className={aClass}>
+            Claude 3.5 Sonnet sets new industry benchmarks for graduate-level
+            reasoning (GPQA), undergraduate-level knowledge (MMLU), and coding
+            proficiency (HumanEval). It shows marked improvement in grasping
+            nuance, humor, and complex instructions, and is exceptional at
+            writing high-quality content with a natural, relatable tone.
+            <br />
+            Claude 3.5 Sonnet operates at twice the speed of Claude 3 Opus. This
+            performance boost, combined with cost-effective pricing, makes
+            Claude 3.5 Sonnet ideal for complex tasks such as context-sensitive
+            customer support and orchestrating multi-step workflows.
+            <br />
+            <Link
+              href="https://www.anthropic.com/news/claude-3-5-sonnet"
+              rel="noopener ugc nofollow"
+              target="_blank"
+              className="underline"
+            >
+              More details about Claude 3.5 Sonnet.
+            </Link>
+          </p>
+        </>
+      )}
       {props.model === "claude-3-opus" && (
         <>
           <h3 className={qClass}>• Claude 3 Opus Introduction</h3>

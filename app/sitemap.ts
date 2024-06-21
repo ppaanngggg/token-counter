@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 1,
     },
   ];
@@ -16,14 +16,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     arr.push({
       url: `${baseUrl}/${group.name.toLowerCase()}`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 1,
     });
     for (const model of group.models) {
       arr.push({
         url: `${baseUrl}/${group.name.toLowerCase()}/${model.value}`,
         lastModified: new Date(),
-        changeFrequency: "monthly",
+        changeFrequency: "weekly",
         priority: 1,
       });
     }
