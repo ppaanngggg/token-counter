@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { groups } from "@/app/utils/groups";
 import Image from "next/image";
 
@@ -36,11 +35,11 @@ export default function Navbar() {
                       {group.models.map((model) => {
                         return (
                           <li key={model.value}>
-                            <Link
+                            <a
                               href={`/${group.name.toLowerCase()}/${model.value}`}
                             >
                               {model.name}
-                            </Link>
+                            </a>
                           </li>
                         );
                       })}
@@ -58,9 +57,9 @@ export default function Navbar() {
           height={42}
           className="rounded-full"
         />
-        <Link href={"/"} className="btn btn-ghost text-xl font-bold px-2">
+        <a href={"/"} className="btn btn-ghost text-xl font-bold px-2">
           Token Counter
-        </Link>
+        </a>
       </div>
       <div className="navbar-center hidden md:flex">
         <ul>
@@ -68,9 +67,7 @@ export default function Navbar() {
             return (
               <li key={group.name} className="dropdown dropdown-hover">
                 <div tabIndex={0} role="button" className="btn btn-ghost m-1">
-                  <Link href={`/${group.name.toLowerCase()}`}>
-                    {group.name}
-                  </Link>
+                  <a href={`/${group.name.toLowerCase()}`}>{group.name}</a>
                 </div>
                 <ul
                   tabIndex={0}
@@ -79,11 +76,9 @@ export default function Navbar() {
                   {group.models.map((model) => {
                     return (
                       <li key={model.value}>
-                        <Link
-                          href={`/${group.name.toLowerCase()}/${model.value}`}
-                        >
+                        <a href={`/${group.name.toLowerCase()}/${model.value}`}>
                           {model.name}
-                        </Link>
+                        </a>
                       </li>
                     );
                   })}
@@ -94,7 +89,7 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="navbar-end pr-2 space-x-1">
-        <Link href="mailto:hantian.pang@gmail.com">
+        <a href="mailto:hantian.pang@gmail.com">
           <Image
             src="/static/email.svg"
             alt="emailme"
@@ -102,15 +97,15 @@ export default function Navbar() {
             height={36}
             className="pr-2"
           />
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://github.com/ppaanngggg/token-counter"
           rel="noopener ugc nofollow"
           target="_blank"
         >
           <Image src="/static/github.svg" alt="github" width={24} height={24} />
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://buymeacoffee.com/ppaanngggg"
           rel="noopener ugc nofollow"
           target="_blank"
@@ -121,14 +116,14 @@ export default function Navbar() {
             width={40}
             height={40}
           />
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://ko-fi.com/ppaanngggg"
           rel="noopener ugc nofollow"
           target="_blank"
         >
           <Image src="/static/ko-fi.svg" alt="ko-fi" width={30} height={30} />
-        </Link>
+        </a>
       </div>
     </header>
   );

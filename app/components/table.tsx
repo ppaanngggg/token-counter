@@ -1,5 +1,4 @@
 import { Group } from "@/app/utils/groups";
-import Link from "next/link";
 
 export default function Table(props: { group: Group }) {
   return (
@@ -17,11 +16,9 @@ export default function Table(props: { group: Group }) {
             <tr key={index} className="hover">
               <th>{index + 1}</th>
               <td>
-                <Link
-                  href={`/${props.group.name.toLowerCase()}/${model.value}`}
-                >
+                <a href={`/${props.group.name.toLowerCase()}/${model.value}`}>
                   {model.name}
-                </Link>
+                </a>
               </td>
               <td>{model.context}</td>
             </tr>

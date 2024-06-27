@@ -1,15 +1,13 @@
-import Link from "next/link";
-
 function LinkOfXenovaTransformers() {
   return (
-    <Link
+    <a
       href="https://xenova.github.io/transformers.js"
       rel="noopener ugc nofollow"
       target="_blank"
       className="underline"
     >
       Transformers.js
-    </Link>
+    </a>
   );
 }
 
@@ -74,9 +72,9 @@ export default function FAQ(props: {
             in leveraging generative AI technology. Should you require any
             assistance or have suggestions for additional features, please feel
             free to reach out to me via{" "}
-            <Link href="mailto:hantian.pang@gmail.com" className="underline">
+            <a href="mailto:hantian.pang@gmail.com" className="underline">
               email
-            </Link>
+            </a>
             .
           </p>
           <h3 className={qClass}>• Why use an LLM Token Counter?</h3>
@@ -188,14 +186,14 @@ export default function FAQ(props: {
             Claude 3.5 Sonnet ideal for complex tasks such as context-sensitive
             customer support and orchestrating multi-step workflows.
             <br />
-            <Link
+            <a
               href="https://www.anthropic.com/news/claude-3-5-sonnet"
               rel="noopener ugc nofollow"
               target="_blank"
               className="underline"
             >
               More details about Claude 3.5 Sonnet.
-            </Link>
+            </a>
           </p>
         </>
       )}
