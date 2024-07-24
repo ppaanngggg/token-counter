@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { AutoTokenizer, PreTrainedTokenizer } from "@xenova/transformers";
+import { AutoTokenizer, env, PreTrainedTokenizer } from "@xenova/transformers";
 import { useDebouncedCallback } from "use-debounce";
+
+env.allowLocalModels = false;
 
 export default function TokenCounter(props: {
   model: { name: string; value: string; context: number; hub: string };
@@ -13,6 +15,7 @@ export default function TokenCounter(props: {
 
   // init tokenizer from file
   useEffect(() => {
+    env.allowLocalModels = false;
     AutoTokenizer.from_pretrained(props.model.hub).then((t) => {
       tokenizer.current = t;
     });
