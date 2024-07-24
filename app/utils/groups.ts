@@ -21,6 +21,12 @@ const groups: Group[] = [
         hub: "Xenova/gpt-4o",
       },
       {
+        name: "GPT-4o mini",
+        value: "gpt-4o-mini",
+        context: 128000,
+        hub: "Xenova/gpt-4o",
+      },
+      {
         name: "GPT-4 Turbo",
         value: "gpt-4-turbo",
         context: 128000,

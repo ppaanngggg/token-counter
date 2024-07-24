@@ -171,6 +171,18 @@ export default function FAQ(props: {
           </p>
         </>
       )}
+      {props.model === "gpt-4o-mini" && (
+        <>
+          <h3 className={qClass}>• GPT-4o mini Introduction</h3>
+          <p className={aClass}>
+            GPT-4o mini (“o” for “omni”) is most advanced model in the small
+            models category, and cheapest model yet. It is multimodal (accepting
+            text or image inputs and outputting text), has higher intelligence
+            than gpt-3.5-turbo but is just as fast. It is meant to be used for
+            smaller tasks, including vision tasks.
+          </p>
+        </>
+      )}
       {props.model === "claude-3.5-sonnet" && (
         <>
           <h3 className={qClass}>• Claude 3.5 Sonnet Introduction</h3>

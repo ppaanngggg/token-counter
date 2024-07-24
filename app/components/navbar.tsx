@@ -66,7 +66,11 @@ export default function Navbar() {
           {groups.map((group) => {
             return (
               <li key={group.name} className="dropdown dropdown-hover">
-                <div tabIndex={0} role="button" className="btn btn-ghost m-1">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost m-1 hover:underline"
+                >
                   <a href={`/${group.name.toLowerCase()}`}>{group.name}</a>
                 </div>
                 <ul
@@ -76,7 +80,10 @@ export default function Navbar() {
                   {group.models.map((model) => {
                     return (
                       <li key={model.value}>
-                        <a href={`/${group.name.toLowerCase()}/${model.value}`}>
+                        <a
+                          href={`/${group.name.toLowerCase()}/${model.value}`}
+                          className="hover:underline"
+                        >
                           {model.name}
                         </a>
                       </li>

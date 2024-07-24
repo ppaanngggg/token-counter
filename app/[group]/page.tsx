@@ -21,7 +21,7 @@ export default function Page({ params }: { params: { group: string } }) {
 
   return (
     <>
-      <div className="card card-compact md:card-normal shadow-xl bg-secondary text-secondary-content m-4">
+      <div className="card card-compact shadow-xl bg-secondary text-secondary-content m-4">
         <div className="card-body items-center text-center">
           <h1 className="card-title">{group.name} Model List</h1>
           <h2>Full list of supported models and their context windows.</h2>

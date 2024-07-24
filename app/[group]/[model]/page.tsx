@@ -30,7 +30,7 @@ export default function Page({
 
   return (
     <>
-      <div className="card card-compact md:card-normal shadow-xl bg-secondary text-secondary-content m-4">
+      <div className="card card-compact shadow-xl bg-secondary text-secondary-content m-4">
         <div className="card-body items-center text-center">
           <h1 className="card-title">{model.name} Token Counter</h1>
           <h2>Count the tokens of the prompt you enter below.</h2>

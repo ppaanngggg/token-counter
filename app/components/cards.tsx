@@ -9,7 +9,9 @@ export default function Cards() {
             <div className="card w-64 shadow-sm">
               <div className="card-body">
                 <a href={`/${d.name.toLowerCase()}`}>
-                  <h2 className="card-title btn btn-ghost">{d.name}</h2>
+                  <h2 className="card-title btn btn-ghost hover:underline">
+                    {d.name}
+                  </h2>
                 </a>
                 <div className="divider"></div>
                 <div className="card-actions">
