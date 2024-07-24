@@ -110,10 +110,16 @@ const groups: Group[] = [
     name: "Meta",
     models: [
       {
+        name: "Llama 3.1",
+        value: "llama-3.1",
+        context: 128000,
+        hub: "Xenova/Meta-Llama-3.1-Tokenizer",
+      },
+      {
         name: "Llama 3",
         value: "llama-3",
         context: 8192,
-        hub: "Xenova/llama-3-tokenizer",
+        hub: "Xenova/llama3-tokenizer-new",
       },
       {
         name: "Llama 2",
