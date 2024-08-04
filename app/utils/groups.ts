@@ -135,6 +135,29 @@ const groups: Group[] = [
       },
     ],
   },
+  {
+    name: "Mistral",
+    models: [
+      {
+        name: "Mistral Large",
+        value: "mistral-large",
+        context: 128000,
+        hub: "Xenova/mistral-tokenizer-v3",
+      },
+      {
+        name: "Mistral Nemo",
+        value: "mistral-nemo",
+        context: 128000,
+        hub: "Xenova/Mistral-Nemo-Instruct-Tokenizer",
+      },
+      {
+        name: "Codestral",
+        value: "codestral",
+        context: 32000,
+        hub: "Xenova/mistral-tokenizer-v3",
+      },
+    ],
+  },
 ];
 
 function getGroup(group: string): Group | undefined {
