@@ -6,6 +6,7 @@ import Navbar from "@/app/components/navbar";
 import { buildMetadata } from "@/app/utils/metadata";
 import Footer from "@/app/components/footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html data-theme="cupcake" lang="en">
+      <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7974984103802210"
+          crossOrigin="anonymous"
+          strategy="lazyOnload"
+        />
+      </head>
       <body
         className={clsx(
           "min-h-screen flex flex-col subpixel-antialiased",

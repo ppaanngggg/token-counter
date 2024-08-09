@@ -50,7 +50,7 @@ export function buildMetadata(
     },
     metadataBase: new URL(baseUrl),
     openGraph: {
-      url: baseUrl,
+      url: baseUrl + canonical,
       title: title,
       description: description,
       siteName: "Token Counter",
