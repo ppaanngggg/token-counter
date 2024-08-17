@@ -59,6 +59,20 @@ export default function FAQ(props: {
           </p>
         </>
       )}
+      {props.group === "mistral" && (
+        <>
+          <h3 className={qClass}>• What is Mistral AI?</h3>
+          <p className={aClass}>
+            Mistral AI is a small, creative team with high scientific standards.
+            Mistral AI make open, efficient, helpful and trustworthy AI models
+            through ground-breaking innovations. Their mission is to make
+            frontier AI ubiquitous, and to provide tailor-made AI to all the
+            builders. This requires fierce independence, strong commitment to
+            open, portable and customisable solutions, and an extreme focus on
+            shipping the most advanced technology in limited time.
+          </p>
+        </>
+      )}
       {props.model === undefined && (
         <>
           <h3 className={qClass}>• What is LLM Token Counter?</h3>
@@ -255,6 +269,61 @@ export default function FAQ(props: {
             that mimic human interactions. The context window of Claude 3 Haiku
             is 200K.
           </p>
+        </>
+      )}
+      {props.model === "mistral-large" && (
+        <>
+          <h3 className={qClass}>• Mistral Large Introduction</h3>
+          <p className={aClass}>
+            Top-tier reasoning for high-complexity tasks, for your most
+            sophisticated needs.
+          </p>
+          <ul className="list-disc pl-6">
+            <li>
+              Multi-lingual (incl. European languages, Chinese, Japanese,
+              Korean, Hindi, Arabic)
+            </li>
+            <li>Large context window of 128K tokens</li>
+            <li>Native function calling capacities and JSON outputs</li>
+            <li>High coding proficiency (80+ coding languages)</li>
+          </ul>
+        </>
+      )}
+      {props.model === "mistral-nemo" && (
+        <>
+          <h3 className={qClass}>• Mistral Nemo Introduction</h3>
+          <p className={aClass}>
+            A state-of-the-art 12B small model built in collaboration with
+            NVIDIA.
+          </p>
+          <ul className="list-disc pl-6">
+            <li>The most powerful model in its size category</li>
+            <li>Available under Apache 2.0 license</li>
+            <li>
+              Multi-lingual (incl. European languages, Chinese, Japanese,
+              Korean, Hindi, Arabic)
+            </li>
+            <li>Large context window of 128K tokens</li>
+          </ul>
+        </>
+      )}
+      {props.model === "codestral" && (
+        <>
+          <h3 className={qClass}>• Codestral Introduction</h3>
+          <p className={aClass}>
+            State-of-the-art Mistral model trained specifically for code tasks.
+          </p>
+          <ul className="list-disc pl-6">
+            <li>
+              Trained on 80+ programming languages (incl. Python, Java, C, C++,
+              PHP, Bash)
+            </li>
+            <li>
+              Optimized for low latency: Way smaller than competitive coding
+              models
+            </li>
+            <li>Context window of 32K tokens</li>
+          </ul>
         </>
       )}
       <h3 className={qClass}>• Will I leak my prompt?</h3>
