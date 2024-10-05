@@ -326,6 +326,36 @@ export default function FAQ(props: {
           </ul>
         </>
       )}
+      {props.model === "llama-3.2" && (
+        <>
+          <h3 className={qClass}>• Llama 3.2 Introduction</h3>
+          <p className={aClass}>
+            Llama 3.2 is a collection of open, customizable AI models including
+            lightweight text models (1B and 3B parameters) optimized for edge
+            and mobile devices, and vision LLMs (11B and 90B parameters). The
+            smaller models excel at on-device tasks like summarization and
+            instruction following with 128K token context, while the larger
+            models add image understanding and reasoning capabilities. Llama 3.2
+            also introduces Llama Stack distributions for easier deployment
+            across various environments.
+          </p>
+        </>
+      )}
+      {props.model === "llama-3.1" && (
+        <>
+          <h3 className={qClass}>• Llama 3.1 Introduction</h3>
+          <p className={aClass}>
+            Llama 3.1 is a collection of open-source large language models,
+            including a flagship 405B parameter model, and upgraded 8B and 70B
+            models. These models boast improved performance rivaling
+            closed-source alternatives, support a 128K context window, and are
+            multilingual. Key features include enhanced reasoning, tool use, and
+            capabilities suitable for tasks like long-form summarization and
+            coding assistance. Llama 3.1 is designed for customization and
+            extensibility within a larger AI system.
+          </p>
+        </>
+      )}
       <h3 className={qClass}>• Will I leak my prompt?</h3>
       <p className={aClass}>
         No, you will not leak your prompt. The token count calculation is
