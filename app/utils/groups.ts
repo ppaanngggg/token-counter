@@ -113,7 +113,7 @@ const groups: Group[] = [
         name: "Llama 3.2",
         value: "llama-3.2",
         context: 128000,
-        hub: "Xenova/Llama-3.2-Tokenizer",
+        hub: "unsloth/Llama-3.2-1B",
       },
       {
         name: "Llama 3.1",
