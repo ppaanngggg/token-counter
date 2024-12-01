@@ -4,6 +4,7 @@ import FAQ from "@/app/components/faq";
 import Table from "@/app/components/table";
 import { Metadata } from "next";
 import { buildMetadata } from "@/app/utils/metadata";
+import MoreTools from "@/app/components/more-tools";
 
 export function generateMetadata({
   params,
@@ -29,6 +30,8 @@ export default function Page({ params }: { params: { group: string } }) {
       </div>
       <Table group={group} />
       <FAQ group={params.group} model={undefined} />
+      <MoreTools />
+      <div className="h-12"></div>
     </>
   );
 }

@@ -1,5 +1,6 @@
 import Cards from "@/app/components/cards";
 import FAQ from "@/app/components/faq";
+import MoreTools from "@/app/components/more-tools";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       </div>
       <Cards />
       <FAQ group={undefined} model={undefined} />
+      <MoreTools />
       <div className="h-12"></div>
     </>
   );

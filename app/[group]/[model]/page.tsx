@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { Metadata } from "next";
 import { buildMetadata } from "@/app/utils/metadata";
 import FAQ from "@/app/components/faq";
+import MoreTools from "@/app/components/more-tools";
 
 export function generateMetadata({
   params,
@@ -40,6 +41,7 @@ export default function Page({
         <TokenCounter model={model} />
       </Suspense>
       <FAQ group={params.group} model={params.model} />
+      <MoreTools />
       <div className="h-12"></div>
     </>
   );
