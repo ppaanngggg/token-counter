@@ -228,7 +228,7 @@ export default function FAQ(props: {
           <h3 className={qClass}>• Claude 3.5 Haiku Introduction</h3>
           <p className={aClass}>
             Claude 3.5 Haiku is an enhanced AI model that delivers both speed
-            and superior performance. The model matches Claude 3 Haiku's speed
+            and superior performance. The model matches Claude 3 Haiku speed
             while improving across all skill sets and surpasses Claude 3 Opus on
             many intelligence benchmarks. It particularly shines in coding
             tasks, achieving a 40.6% score on SWE-bench Verified, outperforming
