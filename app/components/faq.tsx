@@ -223,6 +223,36 @@ export default function FAQ(props: {
           </p>
         </>
       )}
+      {props.model === "claude-3.5-haiku" && (
+        <>
+          <h3 className={qClass}>• Claude 3.5 Haiku Introduction</h3>
+          <p className={aClass}>
+            Claude 3.5 Haiku is an enhanced AI model that delivers both speed
+            and superior performance. The model matches Claude 3 Haiku's speed
+            while improving across all skill sets and surpasses Claude 3 Opus on
+            many intelligence benchmarks. It particularly shines in coding
+            tasks, achieving a 40.6% score on SWE-bench Verified, outperforming
+            both Claude 3.5 Sonnet and GPT-4.
+            <br />
+            The model features low latency, enhanced instruction following, and
+            more precise tool usage. These capabilities make it especially
+            effective for user-facing products, specialized sub-agent tasks, and
+            processing large datasets such as purchase history, pricing, and
+            inventory records. Overall, Claude 3.5 Haiku represents a
+            significant advancement in balancing speed with enhanced
+            capabilities across various applications.
+            <br />
+            <a
+              href="https://www.anthropic.com/news/3-5-models-and-computer-use"
+              rel="noopener ugc nofollow"
+              target="_blank"
+              className="underline"
+            >
+              More details about Claude 3.5 Haiku.
+            </a>
+          </p>
+        </>
+      )}
       {props.model === "claude-3-opus" && (
         <>
           <h3 className={qClass}>• Claude 3 Opus Introduction</h3>

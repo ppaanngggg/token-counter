@@ -69,6 +69,12 @@ const groups: Group[] = [
         hub: "Xenova/claude-tokenizer",
       },
       {
+        name: "Claude 3.5 Haiku",
+        value: "claude-3.5-haiku",
+        context: 200000,
+        hub: "Xenova/claude-tokenizer",
+      },
+      {
         name: "Claude 3 Opus",
         value: "claude-3-opus",
         context: 200000,
