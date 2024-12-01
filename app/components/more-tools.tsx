@@ -1,6 +1,6 @@
 const MoreTools = () => {
   return (
-    <div className="my-6 max-w-[64rem] card card-compact shadow-xl bg-base-100">
+    <div className="my-6 max-w-[64rem] card card-compact shadow-xl bg-white">
       <div className="card-body">
         <h2 className="card-title justify-center">More AI Tools</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

@@ -18,7 +18,7 @@ export default function FAQ(props: {
   const qClass = "text-l font-semibold my-1";
   const aClass = "text-s text-justify my-1";
   return (
-    <div className="rounded-2xl max-w-[64rem] bg-base-100 shadow-xl flex flex-col items-left p-4 m-2">
+    <div className="rounded-2xl max-w-[64rem] bg-blue-50 shadow-xl flex flex-col items-left p-4 m-2">
       <h2 className="text-xl font-semibold mt-2">FAQ:</h2>
       <div className="divider"></div>
       {props.group === "openai" && (
