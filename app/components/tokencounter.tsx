@@ -1,10 +1,8 @@
 "use client";
 
+import { AutoTokenizer, PreTrainedTokenizer } from "@huggingface/transformers";
 import { useEffect, useRef, useState } from "react";
-import { AutoTokenizer, env, PreTrainedTokenizer } from "@xenova/transformers";
 import { useDebouncedCallback } from "use-debounce";
-
-env.allowLocalModels = false;
 
 export default function TokenCounter(props: {
   model: { name: string; value: string; context: number; hub: string };
@@ -15,10 +13,15 @@ export default function TokenCounter(props: {
 
   // init tokenizer from file
   useEffect(() => {
-    env.allowLocalModels = false;
-    AutoTokenizer.from_pretrained(props.model.hub).then((t) => {
-      tokenizer.current = t;
-    });
+    const init = async () => {
+      try {
+        const t = await AutoTokenizer.from_pretrained(props.model.hub);
+        tokenizer.current = t;
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    init();
   }, [props.model]);
 
   // update tokens
@@ -32,7 +35,7 @@ export default function TokenCounter(props: {
       console.log(tokens);
       setTokens(tokens);
     }, 300),
-    [text],
+    [text]
   );
 
   return (
