@@ -356,6 +356,19 @@ export default function FAQ(props: {
           </ul>
         </>
       )}
+      {props.model === "llama-3.3" && (
+        <>
+          <h3 className={qClass}>• Llama 3.3 Introduction</h3>
+          <p className={aClass}>
+            Llama 3.3 represents a sophisticated text-only 70B parameter model,
+            meticulously instruction-tuned to deliver superior performance
+            compared to its predecessor, Llama 3.1 70B, and even surpasses Llama
+            3.2 90B in text-specific applications. Notably, in certain use
+            cases, Llama 3.3 70B demonstrates capabilities that rival those of
+            the much larger Llama 3.1 405B model.
+          </p>
+        </>
+      )}
       {props.model === "llama-3.2" && (
         <>
           <h3 className={qClass}>• Llama 3.2 Introduction</h3>

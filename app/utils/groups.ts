@@ -116,10 +116,16 @@ const groups: Group[] = [
     name: "Meta",
     models: [
       {
+        name: "Llama 3.3",
+        value: "llama-3.3",
+        context: 128000,
+        hub: "unsloth/Llama-3.3-70B-Instruct",
+      },
+      {
         name: "Llama 3.2",
         value: "llama-3.2",
         context: 128000,
-        hub: "unsloth/Llama-3.2-1B",
+        hub: "Xenova/Llama-3.2-Tokenizer",
       },
       {
         name: "Llama 3.1",
@@ -180,5 +186,5 @@ function getModel(group: Group, model: string): Model | undefined {
   return group.models.find((m) => m.value === model);
 }
 
-export { groups, getGroup, getModel };
+export { getGroup, getModel, groups };
 export type { Group, Model };
