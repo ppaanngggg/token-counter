@@ -197,6 +197,24 @@ export default function FAQ(props: {
           </p>
         </>
       )}
+      {props.model === "claude-3.7-sonnet" && (
+        <>
+          <h3 className={qClass}>• Claude 3.7 Sonnet Introduction</h3>
+          <p className={aClass}>
+            Claude 3.7 Sonnet exemplifies versatility through its dual-mode
+            functionality. This innovative model combines traditional language
+            processing with enhanced reasoning capabilities, allowing users to
+            seamlessly switch between standard and advanced thinking modes. In
+            standard mode, it functions as an improved iteration of Claude 3.5
+            Sonnet, while the extended thinking mode enables deeper analytical
+            processing through self-reflection. This advanced mode significantly
+            enhances performance across various domains, including mathematics,
+            physics, coding, and complex instruction execution. Notably, the
+            model maintains consistent prompt responsiveness across both
+            operational modes.
+          </p>
+        </>
+      )}
       {props.model === "claude-3.5-sonnet" && (
         <>
           <h3 className={qClass}>• Claude 3.5 Sonnet Introduction</h3>

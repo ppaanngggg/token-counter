@@ -63,6 +63,12 @@ const groups: Group[] = [
     name: "Anthropic",
     models: [
       {
+        name: "Claude 3.7 Sonnet",
+        value: "claude-3.7-sonnet",
+        context: 200000,
+        hub: "Xenova/claude-tokenizer",
+      },
+      {
         name: "Claude 3.5 Sonnet",
         value: "claude-3.5-sonnet",
         context: 200000,
