@@ -160,6 +160,29 @@ const groups: Group[] = [
     ],
   },
   {
+    name: "Deepseek",
+    models: [
+      {
+        name: "Deepseek R1",
+        value: "deepseek-r1",
+        context: 128000,
+        hub: "deepseek-ai/DeepSeek-R1",
+      },
+      {
+        name: "Deepseek V3",
+        value: "deepseek-v3",
+        context: 128000,
+        hub: "deepseek-ai/DeepSeek-V3",
+      },
+      {
+        name: "Deepseek V2",
+        value: "deepseek-v2",
+        context: 128000,
+        hub: "deepseek-ai/DeepSeek-V2",
+      },
+    ],
+  },
+  {
     name: "Mistral",
     models: [
       {

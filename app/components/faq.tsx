@@ -73,6 +73,21 @@ export default function FAQ(props: {
           </p>
         </>
       )}
+      {props.group === "deepseek" && (
+        <>
+          <h3 className={qClass}>• What is DeepSeek?</h3>
+          <p className={aClass}>
+            DeepSeek is a Chinese AI company founded in July 2023 by Liang
+            Wenfeng. It develops large language models and launched its
+            DeepSeek-R1 chatbot in January 2025. The company boasts low training
+            costs—reportedly $6 million for its V3 model versus about $100
+            million for GPT-4—due partly to limited access to Nvidia chipsets, a
+            factor that has disrupted the market. DeepSeek uses an open weight
+            approach, which offers less modification freedom than true
+            open-source software.
+          </p>
+        </>
+      )}
       {props.model === undefined && (
         <>
           <h3 className={qClass}>• What is LLM Token Counter?</h3>
@@ -414,6 +429,49 @@ export default function FAQ(props: {
             capabilities suitable for tasks like long-form summarization and
             coding assistance. Llama 3.1 is designed for customization and
             extensibility within a larger AI system.
+          </p>
+        </>
+      )}
+      {props.model === "deepseek-r1" && (
+        <>
+          <h3 className={qClass}>• DeepSeek R1 Introduction</h3>
+          <p className={aClass}>
+            DeepSeek introduced its first-generation reasoning models,
+            DeepSeek-R1-Zero and DeepSeek-R1. DeepSeek-R1-Zero was trained using
+            large-scale reinforcement learning without an initial supervised
+            fine-tuning phase, and it demonstrated remarkable reasoning
+            performance. Through reinforcement learning, the model naturally
+            exhibited a range of powerful and intriguing reasoning behaviors.
+          </p>
+        </>
+      )}
+      {props.model === "deepseek-v3" && (
+        <>
+          <h3 className={qClass}>• DeepSeek V3 Introduction</h3>
+          <p className={aClass}>
+            DeepSeek presented DeepSeek-V3, a Mixture-of-Experts language model
+            with 671B parameters (37B activated per token). Using MLA and
+            DeepSeekMoE architectures, along with an auxiliary-loss-free load
+            balancing strategy and multi-token prediction, the model was
+            pre-trained on 14.8 trillion tokens, then refined through Supervised
+            Fine-Tuning and Reinforcement Learning. Evaluations indicate that
+            DeepSeek-V3 outperforms other open-source models and rivals leading
+            closed-source models—all while requiring only 2.788M H800 GPU hours
+            and maintaining a stable training process.
+          </p>
+        </>
+      )}
+      {props.model === "deepseek-v2" && (
+        <>
+          <h3 className={qClass}>• DeepSeek V2 Introduction</h3>
+          <p className={aClass}>
+            DeepSeek-V2 is presented as a robust Mixture-of-Experts (MoE)
+            language model known for its economical training and efficient
+            inference. The model contains a total of 236B parameters, with 21B
+            activated per token. In comparison to its predecessor, DeepSeek 67B,
+            DeepSeek-V2 demonstrates enhanced performance while reducing
+            training costs by 42.5%, cutting the KV cache by 93.3%, and
+            increasing the maximum generation throughput by a factor of 5.76.
           </p>
         </>
       )}
