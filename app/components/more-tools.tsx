@@ -21,22 +21,6 @@ const MoreTools = () => {
           </a>
 
           <a
-            href="https://stockwise.pro"
-            target="_blank"
-            className="card bg-secondary text-secondary-content hover:bg-secondary-focus transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
-          >
-            <div className="card-body items-center text-center">
-              <img
-                src="https://stockwise.pro/favicon.ico"
-                alt="Stockwise Icon"
-                className="w-16 h-16 mb-2"
-              />
-              <h3 className="card-title">Stockwise</h3>
-              <p>AI-powered stock market analysis and insights</p>
-            </div>
-          </a>
-
-          <a
             href="https://design0.app"
             target="_blank"
             className="card bg-accent text-accent-content hover:bg-accent-focus transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
