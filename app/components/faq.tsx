@@ -389,6 +389,21 @@ export default function FAQ(props: {
           </ul>
         </>
       )}
+      {props.model === "llama-4" && (
+        <>
+          <h3 className={qClass}>• Llama 4 Introduction</h3>
+          <p className={aClass}>
+            Meta Llama 4 is a state-of-the-art multimodal AI model capable of
+            processing and integrating various data types, including text,
+            images, video, and audio. It features an unprecedented context
+            window of up to 10 million tokens, enabling it to handle extensive
+            and complex inputs. Utilizing a mixture-of-experts (MoE)
+            architecture, Llama 4 efficiently activates specialized components
+            for specific tasks, enhancing performance while optimizing
+            computational resources.
+          </p>
+        </>
+      )}
       {props.model === "llama-3.3" && (
         <>
           <h3 className={qClass}>• Llama 3.3 Introduction</h3>
