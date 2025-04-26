@@ -19,6 +19,22 @@ const MoreTools = () => {
               <p>Solve complex math problems with AI assistance</p>
             </div>
           </a>
+          
+          <a
+            href="https://freeocr.ai"
+            target="_blank"
+            className="card bg-secondary text-secondary-content hover:bg-secondary-focus transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
+          >
+            <div className="card-body items-center text-center">
+              <img
+                src="https://freeocr.ai/favicon.ico"
+                alt="FreeOCR Icon"
+                className="w-16 h-16 mb-2"
+              />
+              <h3 className="card-title">FreeOCR</h3>
+              <p>Free online OCR tool to extract text from images</p>
+            </div>
+          </a>
 
           <a
             href="https://design0.app"
