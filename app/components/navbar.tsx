@@ -96,15 +96,6 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="navbar-end pr-2 space-x-1">
-        <a href="mailto:hantian.pang@gmail.com">
-          <Image
-            src="/static/email.svg"
-            alt="emailme"
-            width={36}
-            height={36}
-            className="pr-2"
-          />
-        </a>
         <a
           href="https://github.com/ppaanngggg/token-counter"
           rel="noopener ugc nofollow"
