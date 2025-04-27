@@ -12,6 +12,7 @@
     "@huggingface/transformers": "^3.3.3",
     "@next/third-parties": "^14.2.3",
     "clsx": "^2.1.1",
+    "js-tiktoken": "^1.0.20",
     "next": "^14.2.3",
     "react": "^18",
     "react-dom": "^18",

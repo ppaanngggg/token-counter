@@ -1,11 +1,12 @@
-import TokenCounter from "@/app/components/tokencounter";
-import { Suspense } from "react";
-import { getGroup, getModel } from "@/app/utils/groups";
-import { redirect } from "next/navigation";
-import { Metadata } from "next";
-import { buildMetadata } from "@/app/utils/metadata";
 import FAQ from "@/app/components/faq";
 import MoreTools from "@/app/components/more-tools";
+import TikTokenCounter from "@/app/components/tiktoken-tokencounter";
+import TransformersTokenCounter from "@/app/components/transformers-tokencounter";
+import { getGroup, getModel } from "@/app/utils/groups";
+import { buildMetadata } from "@/app/utils/metadata";
+import { Metadata } from "next";
+import { redirect } from "next/navigation";
+import { Suspense } from "react";
 
 export function generateMetadata({
   params,
@@ -38,7 +39,11 @@ export default function Page({
         </div>
       </div>
       <Suspense>
-        <TokenCounter model={model} />
+        {params.group === "openai" ? (
+          <TikTokenCounter model={model} />
+        ) : (
+          <TransformersTokenCounter model={model} />
+        )}
       </Suspense>
       <FAQ group={params.group} model={params.model} />
       <MoreTools />

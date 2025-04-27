@@ -4,7 +4,7 @@ import { AutoTokenizer, PreTrainedTokenizer } from "@huggingface/transformers";
 import { useEffect, useRef, useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
 
-export default function TokenCounter(props: {
+export default function TransformersTokenCounter(props: {
   model: { name: string; value: string; context: number; hub: string };
 }) {
   const [text, setText] = useState<string>("");
@@ -15,8 +15,10 @@ export default function TokenCounter(props: {
   useEffect(() => {
     const init = async () => {
       try {
-        const t = await AutoTokenizer.from_pretrained(props.model.hub);
-        tokenizer.current = t;
+        tokenizer.current = await AutoTokenizer.from_pretrained(
+          props.model.hub,
+        );
+        setTokens(tokenizer.current.encode(text).length);
       } catch (e) {
         console.log(e);
       }
@@ -35,7 +37,7 @@ export default function TokenCounter(props: {
       console.log(tokens);
       setTokens(tokens);
     }, 300),
-    [text]
+    [text],
   );
 
   return (
