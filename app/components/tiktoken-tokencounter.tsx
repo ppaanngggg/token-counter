@@ -1,11 +1,11 @@
 "use client";
 
-import { encodingForModel, Tiktoken } from "js-tiktoken";
+import { Tiktoken } from "js-tiktoken";
 import { useEffect, useRef, useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
 
 export default function TikTokenCounter(props: {
-  model: { name: string; value: string; context: number; hub: string };
+  model: { name: string; value: string; context: number; hub?: string };
 }) {
   const [text, setText] = useState<string>("");
   const [tokens, setTokens] = useState<number>(0);
@@ -14,6 +14,7 @@ export default function TikTokenCounter(props: {
   useEffect(() => {
     const init = async () => {
       try {
+        const encodingForModel = (await import("js-tiktoken")).encodingForModel;
         tokenizer.current = encodingForModel(props.model.value as any);
         setTokens(tokenizer.current.encode(text).length);
       } catch (e) {

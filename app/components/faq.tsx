@@ -212,6 +212,70 @@ export default function FAQ(props: {
           </p>
         </>
       )}
+      {props.model === "o4-mini" && (
+        <>
+          <h3 className={qClass}>• o4-mini Introduction</h3>
+          <p className={aClass}>
+            o4-mini is OpenAI latest small o-series model. It is optimized for
+            fast, effective reasoning with exceptionally efficient performance
+            in coding and visual tasks.
+          </p>
+        </>
+      )}
+      {props.model === "o3" && (
+        <>
+          <h3 className={qClass}>• o3 Introduction</h3>
+          <p className={aClass}>
+            o3 is a well-rounded and powerful model across domains. It sets a
+            new standard for math, science, coding, and visual reasoning tasks.
+            It also excels at technical writing and instruction-following. Use
+            it to think through multi-step problems that involve analysis across
+            text, code, and images.
+          </p>
+        </>
+      )}
+      {props.model === "o3-mini" && (
+        <>
+          <h3 className={qClass}>• o3-mini Introduction</h3>
+          <p className={aClass}>
+            o3-mini is OpenAI newest small reasoning model, providing high
+            intelligence at the same cost and latency targets of o1-mini.
+            o3-mini supports key developer features, like Structured Outputs,
+            function calling, and Batch API.
+          </p>
+        </>
+      )}
+      {props.model === "o1" && (
+        <>
+          <h3 className={qClass}>• o1 Introduction</h3>
+          <p className={aClass}>
+            The o1 series of models are trained with reinforcement learning to
+            perform complex reasoning. o1 models think before they answer,
+            producing a long internal chain of thought before responding to the
+            user.
+          </p>
+        </>
+      )}
+      {props.model === "o1-pro" && (
+        <>
+          <h3 className={qClass}>• o1-pro Introduction</h3>
+          <p className={aClass}>
+            The o1 series of models are trained with reinforcement learning to
+            think before they answer and perform complex reasoning. The o1-pro
+            model uses more compute to think harder and provide consistently
+            better answers.
+          </p>
+        </>
+      )}
+      {props.model === "gpt-4.1" && (
+        <>
+          <h3 className={qClass}>• GPT-4.1 Introduction</h3>
+          <p className={aClass}>
+            GPT-4.1 is OpenAI flagship model for complex tasks. It is well
+            suited for problem solving across domains.
+          </p>
+        </>
+      )}
       {props.model === "claude-3.7-sonnet" && (
         <>
           <h3 className={qClass}>• Claude 3.7 Sonnet Introduction</h3>

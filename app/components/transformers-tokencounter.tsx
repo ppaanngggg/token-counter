@@ -1,11 +1,11 @@
 "use client";
 
-import { AutoTokenizer, PreTrainedTokenizer } from "@huggingface/transformers";
+import { PreTrainedTokenizer } from "@huggingface/transformers";
 import { useEffect, useRef, useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
 
 export default function TransformersTokenCounter(props: {
-  model: { name: string; value: string; context: number; hub: string };
+  model: { name: string; value: string; context: number; hub?: string };
 }) {
   const [text, setText] = useState<string>("");
   const [tokens, setTokens] = useState<number>(0);
@@ -15,8 +15,10 @@ export default function TransformersTokenCounter(props: {
   useEffect(() => {
     const init = async () => {
       try {
-        tokenizer.current = await AutoTokenizer.from_pretrained(
-          props.model.hub,
+        const autoTokenizer = (await import("@huggingface/transformers"))
+          .AutoTokenizer;
+        tokenizer.current = await autoTokenizer.from_pretrained(
+          props.model.hub!,
         );
         setTokens(tokenizer.current.encode(text).length);
       } catch (e) {

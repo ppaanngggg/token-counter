@@ -2,7 +2,7 @@ interface Model {
   name: string;
   value: string;
   context: number;
-  hub: string;
+  hub?: string;
 }
 
 interface Group {
@@ -15,47 +15,70 @@ const groups: Group[] = [
     name: "OpenAI",
     models: [
       {
+        name: "o4-mini",
+        value: "o4-mini",
+        context: 200000,
+      },
+      {
+        name: "o3",
+        value: "o3",
+        context: 200000,
+      },
+      {
+        name: "o3-mini",
+        value: "o3-mini",
+        context: 200000,
+      },
+      {
+        name: "o1",
+        value: "o1",
+        context: 200000,
+      },
+      {
+        name: "o1-pro",
+        value: "o1-pro",
+        context: 200000,
+      },
+      {
+        name: "GPT-4.1",
+        value: "gpt-4.1",
+        context: 1047576,
+      },
+      {
         name: "GPT-4o",
         value: "gpt-4o",
         context: 128000,
-        hub: "Xenova/gpt-4o",
       },
       {
         name: "GPT-4o mini",
         value: "gpt-4o-mini",
         context: 128000,
-        hub: "Xenova/gpt-4o",
       },
       {
         name: "GPT-4 Turbo",
         value: "gpt-4-turbo",
         context: 128000,
-        hub: "Xenova/gpt-4",
       },
-      { name: "GPT-4", value: "gpt-4", context: 8192, hub: "Xenova/gpt-4" },
+      { name: "GPT-4", value: "gpt-4", context: 8192 },
       {
         name: "GPT-3.5 Turbo",
         value: "gpt-3.5-turbo",
         context: 16385,
-        hub: "Xenova/gpt-3.5-turbo",
       },
       {
         name: "Embedding V3 large",
         value: "text-embedding-3-large",
         context: 8191,
-        hub: "Xenova/text-embedding-ada-002",
       },
       {
         name: "Embedding V3 small",
         value: "text-embedding-3-small",
         context: 8191,
-        hub: "Xenova/text-embedding-ada-002",
       },
       {
         name: "Embedding Ada 002",
         value: "text-embedding-ada-002",
         context: 8191,
-        hub: "Xenova/text-embedding-ada-002",
       },
     ],
   },
