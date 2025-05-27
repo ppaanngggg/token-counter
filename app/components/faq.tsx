@@ -276,6 +276,25 @@ export default function FAQ(props: {
           </p>
         </>
       )}
+      {props.model === "claude-opus-4" && (
+        <>
+          <h3 className={qClass}>• Claude Opus 4 Introduction</h3>
+          <p className={aClass}>
+            Claude Opus 4 is Anthropic most capable and intelligent model yet.
+            Claude Opus 4 sets new standards in complex reasoning and advanced
+            coding
+          </p>
+        </>
+      )}
+      {props.model === "claude-sonnet-4" && (
+        <>
+          <h3 className={qClass}>• Claude Sonnet 4 Introduction</h3>
+          <p className={aClass}>
+            Claude Sonnet 4 is Anthropic high-performance model with exceptional
+            reasoning and efficiency.
+          </p>
+        </>
+      )}
       {props.model === "claude-3.7-sonnet" && (
         <>
           <h3 className={qClass}>• Claude 3.7 Sonnet Introduction</h3>
