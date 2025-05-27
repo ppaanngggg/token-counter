@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import clsx from "clsx";
+import Footer from "@/app/components/footer";
 import Navbar from "@/app/components/navbar";
 import { buildMetadata } from "@/app/utils/metadata";
-import Footer from "@/app/components/footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import clsx from "clsx";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import Script from "next/script";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
