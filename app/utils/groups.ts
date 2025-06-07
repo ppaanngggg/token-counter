@@ -233,8 +233,20 @@ const groups: Group[] = [
         hub: "Xenova/mistral-tokenizer-v3",
       },
       {
+        name: "Mistral Small",
+        value: "mistral-small",
+        context: 128000,
+        hub: "Xenova/mistral-tokenizer-v3",
+      },
+      {
         name: "Mistral Nemo",
         value: "mistral-nemo",
+        context: 128000,
+        hub: "Xenova/Mistral-Nemo-Instruct-Tokenizer",
+      },
+      {
+        name: "Devstral Small",
+        value: "devstral-small",
         context: 128000,
         hub: "Xenova/Mistral-Nemo-Instruct-Tokenizer",
       },

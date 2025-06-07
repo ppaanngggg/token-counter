@@ -435,6 +435,17 @@ export default function FAQ(props: {
           </ul>
         </>
       )}
+      {props.model === "mistral-small" && (
+        <>
+          <h3 className={qClass}>• Mistral Small Introduction</h3>
+          <p className={aClass}>
+            Mistral Small adds state-of-the-art vision understanding and
+            enhances long context capabilities up to 128k tokens without
+            compromising text performance. With 24 billion parameters, this
+            model achieves top-tier capabilities in both text and vision tasks.
+          </p>
+        </>
+      )}
       {props.model === "mistral-nemo" && (
         <>
           <h3 className={qClass}>• Mistral Nemo Introduction</h3>
@@ -451,6 +462,19 @@ export default function FAQ(props: {
             </li>
             <li>Large context window of 128K tokens</li>
           </ul>
+        </>
+      )}
+      {props.model === "devstral-small" && (
+        <>
+          <h3 className={qClass}>• Devstral Small Introduction</h3>
+          <p className={aClass}>
+            Devstral is an agentic LLM for software engineering tasks built
+            under a collaboration between Mistral AI and All Hands AI 🙌.
+            Devstral excels at using tools to explore codebases, editing
+            multiple files and power software engineering agents. The model
+            achieves remarkable performance on SWE-bench which positionates it
+            as the #1 open source model on this benchmark.
+          </p>
         </>
       )}
       {props.model === "codestral" && (
