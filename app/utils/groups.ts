@@ -15,6 +15,11 @@ const groups: Group[] = [
     name: "OpenAI",
     models: [
       {
+        name: "GPT-5",
+        value: "gpt-5",
+        context: 400000,
+      },
+      {
         name: "o4-mini",
         value: "o4-mini",
         context: 200000,

@@ -276,6 +276,23 @@ export default function FAQ(props: {
           </p>
         </>
       )}
+      {props.model === "gpt-5" && (
+        <>
+          <h3 className={qClass}>• GPT-5 Introduction</h3>
+          <p className={aClass}>
+            GPT-5 is the flagship model in the GPT-5 series, excelling in
+            complex reasoning, broad world knowledge, and multi-step agentic
+            tasks. Alongside it are `gpt-5-mini` for cost-optimized reasoning
+            and chat, balancing speed, cost, and capability, and `gpt-5-nano`
+            for high-throughput tasks like simple instruction-following or
+            classification, trading some general knowledge for lower cost and
+            latency. The GPT-5 system introduces new API features such as
+            verbosity control, minimal reasoning effort, custom tools, and an
+            allowed tools list, providing developers with enhanced control and
+            flexibility.
+          </p>
+        </>
+      )}
       {props.model === "claude-opus-4" && (
         <>
           <h3 className={qClass}>• Claude Opus 4 Introduction</h3>
