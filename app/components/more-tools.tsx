@@ -19,7 +19,7 @@ const MoreTools = () => {
               <p>Solve complex math problems with AI assistance</p>
             </div>
           </a>
-          
+
           <a
             href="https://freeocr.ai"
             target="_blank"
@@ -37,13 +37,13 @@ const MoreTools = () => {
           </a>
 
           <a
-            href="https://design0.app"
+            href="https://design0.ai"
             target="_blank"
             className="card bg-accent text-accent-content hover:bg-accent-focus transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
           >
             <div className="card-body items-center text-center">
               <img
-                src="https://design0.app/favicon.ico"
+                src="https://design0.ai/favicon.ico"
                 alt="Design0 Icon"
                 className="w-16 h-16 mb-2"
               />
