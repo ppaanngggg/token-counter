@@ -303,6 +303,14 @@ export default function FAQ(props: {
           </p>
         </>
       )}
+      {props.model === "claude-sonnet-4.5" && (
+        <>
+          <h3 className={qClass}>• Claude Sonnet 4.5 Introduction</h3>
+          <p className={aClass}>
+            Claude Sonnet 4.5 is a hybrid reasoning model with superior intelligence for agents, and 200K context window.
+          </p>
+        </>
+      )}
       {props.model === "claude-sonnet-4" && (
         <>
           <h3 className={qClass}>• Claude Sonnet 4 Introduction</h3>
@@ -581,6 +589,22 @@ export default function FAQ(props: {
             fine-tuning phase, and it demonstrated remarkable reasoning
             performance. Through reinforcement learning, the model naturally
             exhibited a range of powerful and intriguing reasoning behaviors.
+          </p>
+        </>
+      )}
+      {props.model === "deepseek-v3.2" && (
+        <>
+          <h3 className={qClass}>• DeepSeek V3.2 Introduction</h3>
+          <p className={aClass}>
+            DeepSeek-V3.2-Exp is an experimental model built on V3.1-Terminus, it debuts DeepSeek Sparse Attention (DSA) for faster, more efficient training & inference on long context.
+          </p>
+        </>
+      )}
+      {props.model === "deepseek-v3.1" && (
+        <>
+          <h3 className={qClass}>• DeepSeek V3.1 Introduction</h3>
+          <p className={aClass}>
+            DeepSeek-V3.1 is the latest upgrade in the DeepSeek family of large language models. It builds on V3 and R1 with better reasoning speed, hybrid inference modes, and agentic improvements.
           </p>
         </>
       )}

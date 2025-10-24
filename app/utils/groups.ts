@@ -97,6 +97,12 @@ const groups: Group[] = [
         hub: "Xenova/claude-tokenizer",
       },
       {
+        name: "Claude Sonnet 4.5",
+        value: "claude-sonnet-4.5",
+        context: 200000,
+        hub: "Xenova/claude-tokenizer",
+      },
+      {
         name: "Claude Sonnet 4",
         value: "claude-sonnet-4",
         context: 200000,
@@ -213,6 +219,18 @@ const groups: Group[] = [
         value: "deepseek-r1",
         context: 128000,
         hub: "deepseek-ai/DeepSeek-R1",
+      },
+      {
+        name: "Deepseek V3.2",
+        value: "deepseek-v3.2",
+        context: 128000,
+        hub: "deepseek-ai/DeepSeek-V3.2-Exp",
+      },
+      {
+        name: "Deepseek V3.1",
+        value: "deepseek-v3.1",
+        context: 128000,
+        hub: "deepseek-ai/DeepSeek-V3.1",
       },
       {
         name: "Deepseek V3",
