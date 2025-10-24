@@ -2,11 +2,11 @@ import { groups } from "@/app/utils/groups";
 
 export default function Cards() {
   return (
-    <div className="carousel carousel-center w-fit max-w-full space-x-4 rounded-box mx-auto p-2 my-4">
+    <div className="w-[80rem] max-w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto p-2 my-4">
       {groups.map((d) => {
         return (
-          <div className="carousel-item bg-base-100 rounded-box" key={d.name}>
-            <div className="card w-64 shadow-sm">
+          <div key={d.name}>
+            <div className="card bg-base-100 w-full shadow-sm">
               <div className="card-body">
                 <a href={`/${d.name.toLowerCase()}`}>
                   <h2 className="card-title btn btn-ghost hover:underline">

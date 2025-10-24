@@ -293,6 +293,45 @@ export default function FAQ(props: {
           </p>
         </>
       )}
+      {props.model === "claude-sonnet-4.5" && (
+        <>
+          <h3 className={qClass}>• Claude Sonnet 4.5 Introduction</h3>
+          <p className={aClass}>
+            Claude Sonnet 4.5 is Anthropic most capable large language model
+            optimized for building complex agents, setting a new industry
+            standard for autonomous coding and reliable, multi-step computer-use
+            workflows.
+          </p>
+        </>
+      )}
+      {props.model === "claude-haiku-4.5" && (
+        <>
+          <h3 className={qClass}>• Claude Haiku 4.5 Introduction</h3>
+          <p className={aClass}>
+            Claude Haiku 4.5 is Anthropic latest small, fast, and highly
+            cost-efficient model that delivers near-frontier performance,
+            rivaling the coding and computer-use capabilities of the older
+            Claude Sonnet 4, but at approximately one-third the cost and more
+            than twice the speed; it is ideal for real-time, low-latency
+            applications like customer service agents and rapid pair
+            programming, and is notable for being statistically more aligned
+            (safer) than both Sonnet 4.5 and Opus 4.1.
+          </p>
+        </>
+      )}
+      {props.model === "claude-opus-4.1" && (
+        <>
+          <h3 className={qClass}>• Claude Opus 4.1 Introduction</h3>
+          <p className={aClass}>
+            Claude Opus 4.1 is an updated, state-of-the-art model from Anthropic
+            that significantly improves performance in highly complex agentic
+            tasks, real-world coding, and in-depth reasoning, achieving a 74.5%
+            score on the SWE-bench Verified coding evaluation and excelling at
+            precise corrections within large codebases for debugging and
+            multi-file refactoring.
+          </p>
+        </>
+      )}
       {props.model === "claude-opus-4" && (
         <>
           <h3 className={qClass}>• Claude Opus 4 Introduction</h3>
@@ -581,6 +620,37 @@ export default function FAQ(props: {
             fine-tuning phase, and it demonstrated remarkable reasoning
             performance. Through reinforcement learning, the model naturally
             exhibited a range of powerful and intriguing reasoning behaviors.
+          </p>
+        </>
+      )}
+      {props.model === "deepseek-v3.2-exp" && (
+        <>
+          <h3 className={qClass}>• DeepSeek V3.2 Exp Introduction</h3>
+          <p className={aClass}>
+            DeepSeek-V3.2-Exp is an experimental model that builds upon the
+            foundations of its predecessor, V3.1-Terminus. This iteration
+            introduces a significant innovation: DeepSeek Sparse Attention
+            (DSA). DSA is designed to revolutionize the way large language
+            models handle long contexts, enabling faster and more efficient
+            training and inference processes. By optimizing attention
+            mechanisms, DeepSeek-V3.2-Exp aims to deliver enhanced performance,
+            particularly in scenarios requiring extensive contextual
+            understanding and generation.
+          </p>
+        </>
+      )}
+      {props.model === "deepseek-v3.1" && (
+        <>
+          <h3 className={qClass}>• DeepSeek V3.1 Introduction</h3>
+          <p className={aClass}>
+            DeepSeek-V3.1 represents a significant advancement in the DeepSeek
+            family of large language models, building upon the strong
+            foundations of its predecessors, V3 and R1. This latest iteration
+            introduces several key enhancements, including improved reasoning
+            speed, more versatile hybrid inference modes, and substantial
+            agentic improvements. These upgrades collectively contribute to a
+            more powerful and efficient model, capable of handling a broader
+            range of complex tasks with greater accuracy and responsiveness.
           </p>
         </>
       )}
