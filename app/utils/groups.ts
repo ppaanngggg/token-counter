@@ -91,14 +91,26 @@ const groups: Group[] = [
     name: "Anthropic",
     models: [
       {
-        name: "Claude Opus 4",
-        value: "claude-opus-4",
+        name: "Claude Sonnet 4.5",
+        value: "claude-sonnet-4.5",
         context: 200000,
         hub: "Xenova/claude-tokenizer",
       },
       {
-        name: "Claude Sonnet 4.5",
-        value: "claude-sonnet-4.5",
+        name: "Claude Haiku 4.5",
+        value: "claude-haiku-4.5",
+        context: 200000,
+        hub: "Xenova/claude-tokenizer",
+      },
+      {
+        name: "Claude Opus 4.1",
+        value: "claude-opus-4.1",
+        context: 200000,
+        hub: "Xenova/claude-tokenizer",
+      },
+      {
+        name: "Claude Opus 4",
+        value: "claude-opus-4",
         context: 200000,
         hub: "Xenova/claude-tokenizer",
       },
@@ -215,14 +227,8 @@ const groups: Group[] = [
     name: "Deepseek",
     models: [
       {
-        name: "Deepseek R1",
-        value: "deepseek-r1",
-        context: 128000,
-        hub: "deepseek-ai/DeepSeek-R1",
-      },
-      {
-        name: "Deepseek V3.2",
-        value: "deepseek-v3.2",
+        name: "Deepseek V3.2 Exp",
+        value: "deepseek-v3.2-exp",
         context: 128000,
         hub: "deepseek-ai/DeepSeek-V3.2-Exp",
       },
@@ -231,6 +237,12 @@ const groups: Group[] = [
         value: "deepseek-v3.1",
         context: 128000,
         hub: "deepseek-ai/DeepSeek-V3.1",
+      },
+      {
+        name: "Deepseek R1",
+        value: "deepseek-r1",
+        context: 128000,
+        hub: "deepseek-ai/DeepSeek-R1",
       },
       {
         name: "Deepseek V3",
