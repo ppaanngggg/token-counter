@@ -40,10 +40,10 @@ export default function Page({
         </div>
       </div>
       <Suspense>
-        {params.group === "openai" ? (
-          <TikTokenCounter model={model} />
-        ) : params.group === "anthropic" ? (
+        {model.sdk ? (
           <ClaudeTokenCounter model={model} />
+        ) : params.group === "openai" ? (
+          <TikTokenCounter model={model} />
         ) : (
           <TransformersTokenCounter model={model} />
         )}

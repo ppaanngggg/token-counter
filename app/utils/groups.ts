@@ -3,6 +3,7 @@ interface Model {
   value: string;
   context: number;
   hub?: string;
+  sdk?: boolean;
 }
 
 interface Group {
@@ -94,71 +95,85 @@ const groups: Group[] = [
         name: "Claude Sonnet 4.5",
         value: "claude-sonnet-4.5",
         context: 200000,
+        sdk: true,
       },
       {
         name: "Claude Haiku 4.5",
         value: "claude-haiku-4.5",
         context: 200000,
+        sdk: true,
       },
       {
         name: "Claude Opus 4.1",
         value: "claude-opus-4.1",
         context: 200000,
+        sdk: true,
       },
       {
         name: "Claude Opus 4",
         value: "claude-opus-4",
         context: 200000,
+        sdk: true,
       },
       {
         name: "Claude Sonnet 4",
         value: "claude-sonnet-4",
         context: 200000,
+        sdk: true,
       },
       {
         name: "Claude 3.7 Sonnet",
         value: "claude-3.7-sonnet",
         context: 200000,
+        sdk: true,
       },
       {
         name: "Claude 3.5 Sonnet",
         value: "claude-3.5-sonnet",
         context: 200000,
+        sdk: true,
       },
       {
         name: "Claude 3.5 Haiku",
         value: "claude-3.5-haiku",
         context: 200000,
+        sdk: true,
       },
       {
         name: "Claude 3 Opus",
         value: "claude-3-opus",
         context: 200000,
+        sdk: true,
       },
       {
         name: "Claude 3 Sonnet",
         value: "claude-3-sonnet",
         context: 200000,
+        sdk: true,
       },
       {
         name: "Claude 3 Haiku",
         value: "claude-3-haiku",
         context: 200000,
+        sdk: true,
       },
       {
         name: "Claude 2.1",
         value: "claude-2.1",
         context: 200000,
+        hub: "Xenova/claude-tokenizer",
       },
       {
         name: "Claude 2.0",
         value: "claude-2.0",
         context: 100000,
+        hub: "Xenova/claude-tokenizer",
       },
       {
         name: "Claude Instant 1.2",
         value: "claude-instant-1.2",
         context: 100000,
+        hub: "Xenova/claude-tokenizer",
       },
     ],
   },
