@@ -1,6 +1,7 @@
 import FAQ from "@/app/components/faq";
 import MoreTools from "@/app/components/more-tools";
 import TikTokenCounter from "@/app/components/tiktoken-tokencounter";
+import ClaudeTokenCounter from "@/app/components/claudetoken-tokencounter";
 import TransformersTokenCounter from "@/app/components/transformers-tokencounter";
 import { getGroup, getModel } from "@/app/utils/groups";
 import { buildMetadata } from "@/app/utils/metadata";
@@ -41,6 +42,8 @@ export default function Page({
       <Suspense>
         {params.group === "openai" ? (
           <TikTokenCounter model={model} />
+        ) : params.group === "anthropic" ? (
+          <ClaudeTokenCounter model={model} />
         ) : (
           <TransformersTokenCounter model={model} />
         )}
