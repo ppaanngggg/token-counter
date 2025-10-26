@@ -88,6 +88,19 @@ export default function FAQ(props: {
           </p>
         </>
       )}
+      {props.group === "qwen" && (
+        <>
+          <h3 className={qClass}>• What is Qwen?</h3>
+          <p className={aClass}>
+            Qwen is a series of large language models developed by Alibaba
+            Cloud. The models are designed to handle a wide range of tasks,
+            including natural language processing, code generation, and
+            reasoning. The Qwen series includes models of various sizes, from
+            small models suitable for mobile devices to large models with
+            hundreds of billions of parameters.
+          </p>
+        </>
+      )}
       {props.model === undefined && (
         <>
           <h3 className={qClass}>• What is LLM Token Counter?</h3>
@@ -681,6 +694,49 @@ export default function FAQ(props: {
             DeepSeek-V2 demonstrates enhanced performance while reducing
             training costs by 42.5%, cutting the KV cache by 93.3%, and
             increasing the maximum generation throughput by a factor of 5.76.
+          </p>
+        </>
+      )}
+      {props.model === "qwen-3" && (
+        <>
+          <h3 className={qClass}>• Qwen-3 Introduction</h3>
+          <p className={aClass}>
+            The Qwen 3 is the latest generation of open-source large language
+            models developed by Alibaba Cloud, offering a comprehensive suite
+            that includes both dense and computationally efficient
+            Mixture-of-Experts (MoE) variants (ranging from 0.6B to 235B total
+            parameters). A key distinguishing feature is its innovative hybrid
+            reasoning system, which allows users to dynamically switch between a
+            Thinking Mode for complex tasks (like coding, math, and logical
+            deduction) that require step-by-step reasoning, and a faster
+            Non-thinking Mode for simple, general-purpose queries. The models
+            demonstrate enhanced performance in reasoning, are highly proficient
+            in over 100 languages and dialects, and feature strong agent
+            capabilities for tool integration. The use of the MoE architecture,
+            particularly in its flagship model (Qwen3-235B-A22B with 22B active
+            parameters), provides the power of a massive model while maintaining
+            significantly reduced computational cost and faster inference speed
+            compared to fully dense models of similar scale.
+          </p>
+        </>
+      )}
+      {props.model === "qwen-2.5" && (
+        <>
+          <h3 className={qClass}>• Qwen-2.5 Introduction</h3>
+          <p className={aClass}>
+            The Qwen 2.5 is a significant iteration of the Qwen large language
+            model series from Alibaba Cloud, designed to be a powerful and
+            versatile open-source AI. It features a range of models from 0.5
+            billion up to 72 billion parameters, with specialized variants like
+            Qwen 2.5-Coder and Qwen 2.5-Math for enhanced capabilities. Trained
+            on a massive dataset of 18 trillion tokens, Qwen 2.5 demonstrates
+            marked improvements over its predecessor in mathematical reasoning,
+            code generation, and complex instruction-following, supporting a
+            long context window of up to 128K tokens. Additionally, the Qwen 2.5
+            family includes multimodal versions, such as Qwen 2.5-VL
+            (Vision-Language) and Qwen 2.5-Omni, enabling the processing of
+            text, images, and audio, positioning it as a highly competitive and
+            efficient open-source alternative to leading proprietary models.
           </p>
         </>
       )}

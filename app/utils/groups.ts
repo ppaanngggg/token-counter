@@ -293,6 +293,23 @@ const groups: Group[] = [
       },
     ],
   },
+  {
+    name: "Qwen",
+    models: [
+      {
+        name: "Qwen 3",
+        value: "qwen-3",
+        context: 131072,
+        hub: "Qwen/Qwen3-8B",
+      },
+      {
+        name: "Qwen 2.5",
+        value: "qwen-2.5",
+        context: 32768,
+        hub: "Qwen/Qwen2.5-7B-Instruct",
+      },
+    ],
+  },
 ];
 
 function getGroup(group: string): Group | undefined {
