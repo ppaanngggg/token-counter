@@ -297,28 +297,16 @@ const groups: Group[] = [
     name: "Qwen",
     models: [
       {
-        name: "Qwen 2.5",
-        value: "qwen-2.5",
-        context: 32768,
-        hub: "Qwen/Qwen2.5-7B-Instruct",
-      },
-      {
         name: "Qwen 3",
         value: "qwen-3",
         context: 131072,
         hub: "Qwen/Qwen3-8B",
       },
       {
-        name: "QwQ 32B",
-        value: "qwq-32b",
-        context: 131072,
-        hub: "Qwen/QwQ-32B",
-      },
-      {
-        name: "Qwen 3 4B Instruct",
-        value: "qwen-3-4b-instruct",
-        context: 16384,
-        hub: "Qwen/Qwen3-4B-Instruct-2507",
+        name: "Qwen 2.5",
+        value: "qwen-2.5",
+        context: 32768,
+        hub: "Qwen/Qwen2.5-7B-Instruct",
       },
     ],
   },
