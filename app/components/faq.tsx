@@ -84,7 +84,21 @@ export default function FAQ(props: {
             million for GPT-4—due partly to limited access to Nvidia chipsets, a
             factor that has disrupted the market. DeepSeek uses an open weight
             approach, which offers less modification freedom than true
+
             open-source software.
+          </p>
+        </>
+      )}
+      {props.group === "qwen" && (
+        <>
+          <h3 className={qClass}>• What is Qwen?</h3>
+          <p className={aClass}>
+            Qwen is a series of large language models developed by Alibaba
+            Cloud. The models are designed to handle a wide range of tasks,
+            including natural language processing, code generation, and
+            reasoning. The Qwen series includes models of various sizes, from
+            small models suitable for mobile devices to large models with
+            hundreds of billions of parameters.
           </p>
         </>
       )}
